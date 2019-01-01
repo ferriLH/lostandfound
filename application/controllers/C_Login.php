@@ -20,7 +20,7 @@ class C_Login extends CI_Controller {
             //redirect('dashboard');
         }else{
             echo"gagal login";
-            //$this->load->view('sign/V_Login',$data);
+            $this->load->view('sign/V_Login');
         }
     }
     function auth()
@@ -33,6 +33,8 @@ class C_Login extends CI_Controller {
             $usr    = $this->input->post('username');
             $psw    = sha1($this->input->post('password'));
             $cek    = $this->M_login->cek($usr,$psw);
+           echo $usr;
+            die;
             if($cek->num_rows() != 0){
                 foreach ($cek->result() as $dat){
                     $sess_data['isLogin']       = TRUE;

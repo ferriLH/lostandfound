@@ -53,3 +53,4 @@ $route['default_controller']    = 'welcome';
 $route['login']                 = 'C_Login';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
+
