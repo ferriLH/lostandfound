@@ -11,11 +11,14 @@ class M_Login extends CI_Model
     {
         parent::__construct();
     }
-
-    function cek($username,$password){
-        $this->db->where('username',$username);
-        $this->db->where('password',$password);
-        return $this->db->get('user');
+    function cek ($user,$pass){
+        $tbl = "t_user";
+        $this->db->select("*");
+        $this->db->from($tbl);
+        $this->db->where("(nik = '$user' OR email = '$user')",NULL,FALSE);
+        $this->db->where("password",$pass);
+        $this->db->where("status",TRUE);
+        return $this->db->get();
     }
 }
 

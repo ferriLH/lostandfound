@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 01 Jan 2019 pada 16.33
+-- Generation Time: 03 Jan 2019 pada 19.58
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -75,8 +75,16 @@ CREATE TABLE `t_user` (
   `password` varchar(255) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `file_foto` varchar(100) DEFAULT NULL,
-  `file_ktp` varchar(100) NOT NULL
+  `file_ktp` varchar(100) NOT NULL,
+  `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `t_user`
+--
+
+INSERT INTO `t_user` (`id_user`, `nik`, `nama`, `email`, `password`, `alamat`, `file_foto`, `file_ktp`, `status`) VALUES
+(1, '10116254', 'Ferri L Halim', 'ferrilasmihalim@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Cipedes Tengah', NULL, '', 1);
 
 --
 -- Indexes for dumped tables
@@ -122,7 +130,7 @@ ALTER TABLE `t_barang`
 -- AUTO_INCREMENT for table `t_user`
 --
 ALTER TABLE `t_user`
-  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

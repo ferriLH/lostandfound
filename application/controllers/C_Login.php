@@ -16,10 +16,9 @@ class C_Login extends CI_Controller {
     public function index()
     {
         if ($this->session->userdata('isLogin') == TRUE) {
-            echo"login";
-            //redirect('dashboard');
+            $this->load->view('sign/V_Login');
+            //redirect('login');
         }else{
-            echo"gagal login";
             $this->load->view('sign/V_Login');
         }
     }
@@ -32,24 +31,27 @@ class C_Login extends CI_Controller {
         }else{
             $usr    = $this->input->post('username');
             $psw    = sha1($this->input->post('password'));
-            $cek    = $this->M_login->cek($usr,$psw);
-           echo $usr;
-            die;
+            $cek    = $this->M_Login->cek($usr,$psw);
             if($cek->num_rows() != 0){
                 foreach ($cek->result() as $dat){
                     $sess_data['isLogin']       = TRUE;
-                    $sess_data['id']            = $dat->id;
-                    $sess_data['username']      = $dat->username;
-                    $sess_data['password']      = $dat->password;
+                    $sess_data['id_user']       = $dat->id_user;
+                    $sess_data['nik']           = $dat->nik;
                     $sess_data['nama']          = $dat->nama;
+                    $sess_data['email']         = $dat->email;
+                    $sess_data['password']      = $dat->password;
+                    $sess_data['alamat']        = $dat->alamat;
+                    $sess_data['status']        = $dat->status;
                     $this->session->set_userdata($sess_data);
                 }
-                echo"Login";
-                //redirect('dashboard');
+                echo "login";
+                ?>
+                <br><a href="<?php base_url('login/logout')?>">logout</a>
+                <?php
+                //$this->load->view('sign/V_Login');
             }else {
-                $this->session->set_flashdata('result_login', '<br>Username atau Password yang anda masukkan salah!');
-                echo"gagal login";
-                //redirect('login');
+                $this->session->set_flashdata('failed', '<br>Username atau Password yang anda masukkan salah!');
+                redirect('login');
             }
         }
     }
