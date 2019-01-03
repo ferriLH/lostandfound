@@ -23,7 +23,7 @@ $this->load->view("front/parts/V_Navigation");
                         <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                             <h6>What are you looking for?</h6>
                             <form action="#" method="get">
-                                <input size="80%" type="text">
+                                <input size=70%" type="text">
                                 <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
                             </form>
                         </div>
@@ -32,23 +32,32 @@ $this->load->view("front/parts/V_Navigation");
                             <form action="#" method="get">
                                 <select class="custom-select">
                                     <option selected>Label</option>
-                                    <option value="1">1</option>
+                                     <?php foreach ($label as $l):?>
+                                     <option value=<?php print_r($l->nama_label);?>><?php print_r($l->nama_label);?></option>
+                                     <?php endforeach;?>
+                                    <!-- <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
                                     <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="5">5</option> -->
                                 </select>
                                 <select class="custom-select">
                                     <option selected>Area</option>
-                                    <option value="1">1</option>
+                                    <?php foreach ($kota as $k):?>
+                                     <option value=<?php print_r($k->nama_kota);?>><?php print_r($k->nama_kota);?></option>
+                                     <?php endforeach;?>
+                                    <!-- <option value="1">1</option>
                                     <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <option value="3">3</option> -->
                                 </select>
                                 <select class="custom-select">
                                     <option selected>university</option>
-                                    <option value="1">1</option>
+                                    <?php foreach ($univ as $u):?>
+                                     <option value=<?php print_r($u->nama_univ);?>><?php print_r($u->nama_univ);?></option>
+                                     <?php endforeach;?>
+                                    <!-- <option value="1">1</option>
                                     <option value="2">2</option>
-                                    <option value="3">3</option>
+                                    <option value="3">3</option> -->
                                 </select>
                                 <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
                             </form>
@@ -69,61 +78,61 @@ $this->load->view("front/parts/V_Navigation");
 <!-- ***** Welcome Area End ***** -->
 
 <!-- ***** Catagory Area Start ***** -->
-<section class="dorne-catagory-area">
+<!-- <section class="dorne-catagory-area">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="all-catagories">
-                    <div class="row">
+                    <div class="row"> -->
                         <!-- Single Catagory Area -->
-                        <div class="col-12 col-sm-6 col-md">
+                        <!-- div class="col-12 col-sm-6 col-md">
                             <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.2s">
                                 <div class="catagory-content">
-                                    <img src="<?php echo base_url('assets/front/img/core-img/icon-1.png')?>" alt="">
+                                    <img src="<?php //echo base_url('assets/front/img/core-img/icon-1.png')?>" alt="">
                                     <a href="#">
                                         <h6>Hotels</h6>
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Single Catagory Area -->
-                        <div class="col-12 col-sm-6 col-md">
+                        <!-- <div class="col-12 col-sm-6 col-md">
                             <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.4s">
                                 <div class="catagory-content">
-                                    <img src="<?php echo base_url('assets/front/img/core-img/icon-2.png')?>" alt="">
+                                    <img src="<?php //echo base_url('assets/front/img/core-img/icon-2.png')?>" alt="">
                                     <a href="#">
                                         <h6>Restaurants</h6>
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Single Catagory Area -->
-                        <div class="col-12 col-sm-6 col-md">
+                       <!--  <div class="col-12 col-sm-6 col-md">
                             <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.6s">
                                 <div class="catagory-content">
-                                    <img src="<?php echo base_url('assets/front/img/core-img/icon-3.png')?>" alt="">
+                                    <img src="<?php //echo base_url('assets/front/img/core-img/icon-3.png')?>" alt="">
                                     <a href="#">
                                         <h6>Shopping</h6>
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Single Catagory Area -->
-                        <div class="col-12 col-sm-6 col-md">
+                        <!-- <div class="col-12 col-sm-6 col-md">
                             <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.8s">
                                 <div class="catagory-content">
-                                    <img src="<?php echo base_url('assets/front/img/core-img/icon-4.png')?>" alt="">
+                                    <img src="<?php //echo base_url('assets/front/img/core-img/icon-4.png')?>" alt="">
                                     <a href="#">
                                         <h6>Beauty &amp; Spa</h6>
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- Single Catagory Area -->
-                        <div class="col-12 col-md">
+                        <!-- <div class="col-12 col-md">
                             <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="1s">
                                 <div class="catagory-content">
-                                    <img src="<?php echo base_url('assets/front/img/core-img/icon-5.png')?>" alt="">
+                                    <img src="<?php //echo base_url('assets/front/img/core-img/icon-5.png')?>" alt="">
                                     <a href="#">
                                         <h6>Cinema</h6>
                                     </a>
@@ -135,7 +144,7 @@ $this->load->view("front/parts/V_Navigation");
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- ***** Catagory Area End ***** -->
 
 <!-- ***** About Area Start ***** -->

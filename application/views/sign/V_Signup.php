@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- Title -->
-    <title>LF</title>
+    <title>Sign Up To LF</title>
 
     <!-- Favicon -->
     <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.ico')?>">
@@ -26,39 +26,54 @@
 
 </head>
 <body>
-<h1 class="w3ls">LOGIN</h1>
+<h1 class="w3ls">SIGN UP</h1>
 <div class="content-w3ls">
     <div class="content-agile1">
         <h2 class="agileits1">LF</h2>
         <p class="agileits2"></p>
     </div>
     <div class="content-agile2">
-        <?php
-        if (validation_errors() || $this->session->flashdata('failed')) {
+        <!-- <?php
+     //   if (validation_errors() || $this->session->flashdata('failed')) {
             ?>
             <div class="alert alert-danger">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
                 <strong>Warning!</strong>
-                <?php echo validation_errors(); ?>
-                <?php echo $this->session->flashdata('failed'); ?>
+                <?php //echo validation_errors(); ?>
+                <?php //echo $this->session->flashdata('failed'); ?>
             </div>
-        <?php } ?>
-        <form action="<?php echo base_url('login/auth')?>" method="post">
+        <?php //} ?> -->
+        <form action="<?php echo base_url('signup/confirm')?>" method="post">
+             <div class="w3layouts">
+                <input type="text" id="nik" name="nik" placeholder="NIK" title="NIK" required="">
+            </div>
+             <div class="w3layouts">
+                <input type="text" id="firstname" name="username" placeholder="Username" title="Username" required="">
+            </div>
+              
             <div class="w3layouts">
-                <input type="text" id="firstname" name="username" placeholder="Username or email" title="Please enter your username or email" required="">
+                <input type="text" id="email" name="email" placeholder="E-Mail" title="E-Mail" required="">
             </div>
 
+            <div class="w3layouts">
+            	<input type="text" id="alamat" name="alamat" placeholder="Address" title="Address" required="">
+            </div>
+            
             <div class="agileinfo">
                 <input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
             </div>
 
-            <input type="submit" class="register" value="Login">
-        </form>
-        <ul class="social-agileinfo wthree2">
+            <div class="agileinfo">
+                <input type="password" class="lock" name="repassword" placeholder="Repeat Password" id="password2" required="">
+            </div>
 
-            <li><a href="<?php echo base_url('')?>"><i class="fa fa-caret-left" data-toggle="tooltip" title="Back"></i></a></li>
-            <li><a href="<?php echo base_url('signup')?>"><i class="fa fa-caret-right" data-toggle="tooltip" title="Sign Up"></i></a></li>
-        </ul>
+            <input type="submit" class="register" value="Sign Up">
+        </form>
+        <!-- <ul class="social-agileinfo wthree2">
+
+            <li><a href="<?php //echo base_url('')?>"><i class="fa fa-caret-left" data-toggle="tooltip" title="Back"></i></a></li>
+            <li><a href="<?php //echo base_url('signup')?>"><i class="fa fa-caret-right" data-toggle="tooltip" title="Sign Up"></i></a></li> -->
+        <!-- </ul>
         <br>
         <p class="wthree w3l">Signup With Your Favourite Social Profile</p>
         <ul class="social-agileinfo wthree2">
@@ -66,7 +81,7 @@
             <li><a href="#"><i class="fa fa-youtube"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        </ul>
+        </ul> -->
     </div>
     <div class="clear"></div>
 </div>

@@ -53,6 +53,8 @@ $route['default_controller']    = 'C_Home';
 $route['home']                  = 'C_Home';
 $route['login']                 = 'C_Login';
 $route['login/auth']            = 'C_Login/auth';
+$route['signup']                = 'C_Signup';
+$route['signup/confirm']        = 'C_Signup/confirm';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
 

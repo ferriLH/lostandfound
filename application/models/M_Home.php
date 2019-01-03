@@ -19,4 +19,20 @@ class M_Home extends CI_Model
         $this->db->order_by('nama_label','desc');
         return $this->db->get()->result();
     }
+    function get_kota()
+    {
+        $this->db->select('*');
+        $this->db->from('t_kota');
+        $this->db->limit(5);
+        $this->db->order_by('nama_kota','desc');
+        return $this->db->get()->result();
+    }
+    function get_univ()
+    {
+        $this->db->select('*');
+        $this->db->from('t_univ');
+        $this->db->limit(5);
+        $this->db->order_by('nama_univ','desc');
+        return $this->db->get()->result();
+    }
 }

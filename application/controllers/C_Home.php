@@ -17,6 +17,11 @@ class C_Home extends CI_Controller
     public function index()
     {
         $data['label'] = $this->M_Home->get_label();
-        $this->load->view('front/V_Home');
+        $data['kota'] = $this->M_Home->get_kota();
+        $data['univ'] = $this->M_Home->get_univ();
+
+
+
+        $this->load->view('front/V_Home',$data);
     }
 }
