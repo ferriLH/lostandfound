@@ -45,14 +45,14 @@
         <?php } ?>
         <form action="<?php echo base_url('signup/confirm')?>" method="post">
              <div class="w3layouts">
-                <input type="text" id="firstname" name="nik" placeholder="NIK" title="NIK" required="">
+                <input type="number" id="firstname" name="nik" placeholder="NIK" title="NIK" required="">
             </div>
              <div class="w3layouts">
-                <input type="text" id="firstname" name="username" placeholder="Username" title="Username" required="">
+                <input type="text" id="firstname" name="username" placeholder="Full Name" title="Full Name" required="">
             </div>
               
             <div class="w3layouts">
-                <input type="text" id="email" name="email" placeholder="E-Mail" title="E-Mail" required="">
+                <input type="email" id="email" name="email" placeholder="E-Mail" title="E-Mail" required="">
             </div>
 
             <div class="w3layouts">
@@ -69,19 +69,6 @@
 
             <input type="submit" class="register" value="Sign Up">
         </form>
-        <!-- <ul class="social-agileinfo wthree2">
-
-            <li><a href="<?php //echo base_url('')?>"><i class="fa fa-caret-left" data-toggle="tooltip" title="Back"></i></a></li>
-            <li><a href="<?php //echo base_url('signup')?>"><i class="fa fa-caret-right" data-toggle="tooltip" title="Sign Up"></i></a></li> -->
-        <!-- </ul>
-        <br>
-        <p class="wthree w3l">Signup With Your Favourite Social Profile</p>
-        <ul class="social-agileinfo wthree2">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        </ul> -->
     </div>
     <div class="clear"></div>
 </div>
