@@ -2,11 +2,39 @@
 <html>
 <head>
     <!-- Title -->
-    <title>LF</title>
+    <title><?php echo $title;?></title>
 
     <!-- Favicon -->
     <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.ico')?>">
+    <style>
+        a.txt1 {
+            font-family: ;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #999;
+            margin: 0px;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+        }
 
+        a.txt1:focus {
+            outline: none !important;
+        }
+
+        a.txt1:hover {
+            text-decoration: none;
+            color: #fff
+        }
+        .txt1 {
+            padding-right: 20px ;
+            float: right;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #999;
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Official Signup Form Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
@@ -57,12 +85,11 @@
             <div class="w3layouts">
                 <input type="text" id="firstname" name="username" placeholder="Username or email" title="Please enter your username or email" required="">
             </div>
-
             <div class="agileinfo">
                 <input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
             </div>
-
             <input type="submit" class="register" value="Login">
+
         </form>
         <ul class="social-agileinfo wthree2">
 
@@ -73,12 +100,14 @@
         <p class="wthree w3l">Signup With Your Favourite Social Profile</p>
         <ul class="social-agileinfo wthree2">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-youtube"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
         </ul>
+        <a class="txt1" href="<?php echo base_url('forget_pass');?>">Forget Password</a>
     </div>
-    <div class="clear"></div>
+    <div class="clear">
+
+    </div>
 </div>
 
 </body>

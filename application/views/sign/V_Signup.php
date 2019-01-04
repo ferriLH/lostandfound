@@ -2,7 +2,7 @@
 <html>
 <head>
     <!-- Title -->
-    <title>Sign Up To LF</title>
+    <title><?php echo $title;?></title>
 
     <!-- Favicon -->
     <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.ico')?>">

@@ -10,7 +10,10 @@ class C_Signup extends CI_Controller
     }
     public function index()
     {
-        $this->load->view('sign/V_Signup');
+        $data = array(
+            "title" => "Sign Up | Lost and Found"
+        );
+        $this->load->view('sign/V_Signup',$data);
     }
     function confirm()
     {

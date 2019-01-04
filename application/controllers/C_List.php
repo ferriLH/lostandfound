@@ -11,11 +11,10 @@ class C_List extends CI_Controller
     }
     public function index()
     {
-        
-
-        $data['barang'] = $this->M_List->get_barang();
-
-
+        $data = array(
+            "title" => "Explore | Lost and Found",
+            "barang" => $this->M_List->get_barang(),
+        );
         $this->load->view('front/V_List',$data);
     }
 }

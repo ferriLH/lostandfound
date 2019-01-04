@@ -10,7 +10,10 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Dashboard 4</title>
+    <title><?php echo $title;?></title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.ico')?>">
 
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url();?>/assets/back/CoolAdmin-master/css/font-face.css" rel="stylesheet" media="all">

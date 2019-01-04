@@ -9,7 +9,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>LF</title>
+    <title><?php echo $title;?></title>
 
     <!-- Favicon -->
     <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.ico')?>">

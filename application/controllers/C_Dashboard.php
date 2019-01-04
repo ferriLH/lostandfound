@@ -16,7 +16,10 @@ class C_Dashboard extends CI_Controller {
     public function index()
     {
         if ($this->session->userdata('isLogin') == TRUE) {
-            $this->load->view('back/V_Dashboard');
+            $data = array(
+                "title" => "Dashboard | Lost and Found",
+            );
+            $this->load->view('back/V_Dashboard',$data);
         }else{
             redirect('login');
         }
