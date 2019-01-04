@@ -16,8 +16,7 @@ class C_Login extends CI_Controller {
     public function index()
     {
         if ($this->session->userdata('isLogin') == TRUE) {
-            $this->load->view('sign/V_Login');
-            //redirect('login');
+            redirect('dashboard');
         }else{
             $this->load->view('sign/V_Login');
         }
@@ -44,11 +43,7 @@ class C_Login extends CI_Controller {
                     $sess_data['status']        = $dat->status;
                     $this->session->set_userdata($sess_data);
                 }
-                echo "login";
-                ?>
-                <br><a href="<?php base_url('login/logout')?>">logout</a>
-                <?php
-                //$this->load->view('sign/V_Login');
+                redirect('dashboard');
             }else {
                 $this->session->set_flashdata('failed', '<br>Username atau Password yang anda masukkan salah!');
                 redirect('login');

@@ -51,8 +51,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller']    = 'C_Home';
 $route['home']                  = 'C_Home';
+$route['dashboard']             = 'C_Dashboard';
 $route['login']                 = 'C_Login';
 $route['login/auth']            = 'C_Login/auth';
+$route['logout']                = 'C_Login/logout';
 $route['signup']                = 'C_Signup';
 $route['signup/confirm']        = 'C_Signup/confirm';
 $route['explore']               = 'C_List';
