@@ -33,19 +33,19 @@
         <p class="agileits2"></p>
     </div>
     <div class="content-agile2">
-        <!-- <?php
-     //   if (validation_errors() || $this->session->flashdata('failed')) {
+        <?php
+        if (validation_errors() || $this->session->flashdata('failed')) {
             ?>
-            <div class="alert alert-danger">
+            <div class="alert alert-warning">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
-                <strong>Warning!</strong>
-                <?php //echo validation_errors(); ?>
-                <?php //echo $this->session->flashdata('failed'); ?>
+                <strong>Warning</strong>
+                <?php echo validation_errors(); ?>
+                <?php echo $this->session->flashdata('failed'); ?>
             </div>
-        <?php //} ?> -->
+        <?php } ?>
         <form action="<?php echo base_url('signup/confirm')?>" method="post">
              <div class="w3layouts">
-                <input type="text" id="nik" name="nik" placeholder="NIK" title="NIK" required="">
+                <input type="text" id="firstname" name="nik" placeholder="NIK" title="NIK" required="">
             </div>
              <div class="w3layouts">
                 <input type="text" id="firstname" name="username" placeholder="Username" title="Username" required="">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="w3layouts">
-            	<input type="text" id="alamat" name="alamat" placeholder="Address" title="Address" required="">
+            	<input type="text" id="firstname" name="alamat" placeholder="Address" title="Address" required="">
             </div>
             
             <div class="agileinfo">

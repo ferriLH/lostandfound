@@ -35,29 +35,18 @@ $this->load->view("front/parts/V_Navigation");
                                      <?php foreach ($label as $l):?>
                                      <option value=<?php print_r($l->nama_label);?>><?php print_r($l->nama_label);?></option>
                                      <?php endforeach;?>
-                                    <!-- <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option> -->
                                 </select>
                                 <select class="custom-select">
                                     <option selected>Area</option>
                                     <?php foreach ($kota as $k):?>
                                      <option value=<?php print_r($k->nama_kota);?>><?php print_r($k->nama_kota);?></option>
                                      <?php endforeach;?>
-                                    <!-- <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option> -->
                                 </select>
                                 <select class="custom-select">
                                     <option selected>university</option>
                                     <?php foreach ($univ as $u):?>
                                      <option value=<?php print_r($u->nama_univ);?>><?php print_r($u->nama_univ);?></option>
                                      <?php endforeach;?>
-                                    <!-- <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option> -->
                                 </select>
                                 <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
                             </form>

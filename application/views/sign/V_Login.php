@@ -43,6 +43,16 @@
                 <?php echo $this->session->flashdata('failed'); ?>
             </div>
         <?php } ?>
+        <?php
+        if (validation_errors() || $this->session->flashdata('success')) {
+            ?>
+            <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>Success</strong>
+                <?php echo validation_errors(); ?>
+                <?php echo $this->session->flashdata('success'); ?>
+            </div>
+        <?php } ?>
         <form action="<?php echo base_url('login/auth')?>" method="post">
             <div class="w3layouts">
                 <input type="text" id="firstname" name="username" placeholder="Username or email" title="Please enter your username or email" required="">

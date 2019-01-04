@@ -10,25 +10,30 @@ class C_Signup extends CI_Controller
     }
     public function index()
     {
-
         $this->load->view('sign/V_Signup');
-
-         
     }
     function confirm()
-    { 
-             $data['nik']   =    $this->input->post('nik');
-             $data['nama'] =   $this->input->post('username');
-             $data['email']  =    $this->input->post('email');
-             $data['password'] =  md5($this->input->post('password'));
-             $data['alamat'] =  ($this->input->post('alamat'));
+    {
+        $data['nik']        =   $this->input->post('nik');
+        $data['nama']       =   $this->input->post('username');
+        $data['email']      =   $this->input->post('email');
+        $data['password']   =   sha1($this->input->post('password'));
+        $data['alamat']     =   $this->input->post('alamat');
+        $pass               =   $this->input->post('password');
+        $cpass              =   $this->input->post('repassword');
+        if ($pass!=$cpass){
+            $this->session->set_flashdata('failed', "<br>Password Doens't Match!");
+            $this->session->set_flashdata('success', NULL);
 
- 
-             $this->M_Signup->daftar($data);
-             
-             $pesan['message'] ="Pendaftaran berhasil";
-             
-             $this->load->view('sign/v_Success',$pesan);
+            redirect('signup');
+        }else {
+            $pwd = sha1($cpass);
+            $this->M_Signup->daftar($data);
+            $this->session->set_flashdata('success', "<br>Create Success. Please confirm your email address");
+            $this->session->set_flashdata('failed', NULL);
+
+            redirect('login');
+        }
     }
 }
 ?>

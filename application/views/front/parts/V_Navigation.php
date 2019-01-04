@@ -65,12 +65,12 @@
                             <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
                         </div>
                         <!-- Signin btn -->
-                        <div class="dorne-signin-btn">
-                            <a href="<?php echo base_url('login')?>">Sign in  and Register</a>
-                        </div>
+<!--                        <div class="dorne-signin-btn">-->
+<!--                            <a href="--><?php //echo base_url('login')?><!--">Sign in  and Register</a>-->
+<!--                        </div>-->
                         <!-- Add listings btn -->
                         <div class="dorne-add-listings-btn">
-                            <a href="#" class="btn dorne-btn">+ Add Listings</a>
+                            <a href="<?php echo base_url('login')?>" class="btn dorne-btn">Sign in and Register</a>
                         </div>
                     </div>
                 </nav>
