@@ -13,6 +13,7 @@ class C_Signup extends CI_Controller
         $this->load->view('sign/V_Signup');
     }
     function confirm()
+    {
         $data['nama']       =   $this->input->post('username');
         $data['nik']        =   $this->input->post('nik');
         $data['password']   =   sha1($this->input->post('password'));

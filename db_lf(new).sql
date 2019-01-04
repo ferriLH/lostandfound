@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 03 Jan 2019 pada 19.58
+-- Generation Time: 04 Jan 2019 pada 12.52
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -32,6 +32,8 @@ CREATE TABLE `t_barang` (
   `id_barang` int(255) NOT NULL,
   `id_kota` int(255) NOT NULL,
   `id_label` int(255) NOT NULL,
+  `id_user` int(255) NOT NULL,
+  `id_univ` int(255) NOT NULL,
   `nama_barang` varchar(200) NOT NULL,
   `foto_barang` varchar(200) NOT NULL,
   `deskripsi` text NOT NULL,
@@ -50,6 +52,13 @@ CREATE TABLE `t_kota` (
   `nama_kota` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data untuk tabel `t_kota`
+--
+
+INSERT INTO `t_kota` (`id_kota`, `nama_kota`) VALUES
+(1, 'Bandung');
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +69,31 @@ CREATE TABLE `t_label` (
   `id_label` int(255) NOT NULL,
   `nama_label` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `t_label`
+--
+
+INSERT INTO `t_label` (`id_label`, `nama_label`) VALUES
+(1, 'dompet');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `t_univ`
+--
+
+CREATE TABLE `t_univ` (
+  `id_univ` int(255) NOT NULL,
+  `nama_univ` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `t_univ`
+--
+
+INSERT INTO `t_univ` (`id_univ`, `nama_univ`) VALUES
+(1, 'Universitas Komputer Indonesia');
 
 -- --------------------------------------------------------
 
@@ -75,7 +109,7 @@ CREATE TABLE `t_user` (
   `password` varchar(255) NOT NULL,
   `alamat` varchar(255) NOT NULL,
   `file_foto` varchar(100) DEFAULT NULL,
-  `file_ktp` varchar(100) NOT NULL,
+  `file_ktp` varchar(100) DEFAULT NULL,
   `status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -84,7 +118,7 @@ CREATE TABLE `t_user` (
 --
 
 INSERT INTO `t_user` (`id_user`, `nik`, `nama`, `email`, `password`, `alamat`, `file_foto`, `file_ktp`, `status`) VALUES
-(1, '10116254', 'Ferri L Halim', 'ferrilasmihalim@gmail.com', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Cipedes Tengah', NULL, '', 1);
+(8, '3203232506980005', 'utut', 'ututardia@gmail.com', 'a00ef087ab5a5987ade38555f3a341f90f7ee3a7', 'Bandung', NULL, NULL, 1);
 
 --
 -- Indexes for dumped tables
@@ -96,7 +130,10 @@ INSERT INTO `t_user` (`id_user`, `nik`, `nama`, `email`, `password`, `alamat`, `
 ALTER TABLE `t_barang`
   ADD PRIMARY KEY (`id_barang`),
   ADD KEY `id_kota` (`id_kota`),
-  ADD KEY `id_label` (`id_label`);
+  ADD KEY `id_label` (`id_label`),
+  ADD KEY `id_user` (`id_user`),
+  ADD KEY `id_univ` (`id_univ`),
+  ADD KEY `id_univ_2` (`id_univ`);
 
 --
 -- Indexes for table `t_kota`
@@ -109,6 +146,12 @@ ALTER TABLE `t_kota`
 --
 ALTER TABLE `t_label`
   ADD PRIMARY KEY (`id_label`);
+
+--
+-- Indexes for table `t_univ`
+--
+ALTER TABLE `t_univ`
+  ADD PRIMARY KEY (`id_univ`);
 
 --
 -- Indexes for table `t_user`
@@ -124,13 +167,13 @@ ALTER TABLE `t_user`
 -- AUTO_INCREMENT for table `t_barang`
 --
 ALTER TABLE `t_barang`
-  MODIFY `id_barang` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_barang` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `t_user`
 --
 ALTER TABLE `t_user`
-  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -141,7 +184,9 @@ ALTER TABLE `t_user`
 --
 ALTER TABLE `t_barang`
   ADD CONSTRAINT `t_barang_ibfk_1` FOREIGN KEY (`id_kota`) REFERENCES `t_kota` (`id_kota`),
-  ADD CONSTRAINT `t_barang_ibfk_2` FOREIGN KEY (`id_label`) REFERENCES `t_label` (`id_label`);
+  ADD CONSTRAINT `t_barang_ibfk_2` FOREIGN KEY (`id_label`) REFERENCES `t_label` (`id_label`),
+  ADD CONSTRAINT `t_barang_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `t_user` (`id_user`),
+  ADD CONSTRAINT `t_barang_ibfk_4` FOREIGN KEY (`id_univ`) REFERENCES `t_univ` (`id_univ`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
