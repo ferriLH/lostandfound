@@ -13,11 +13,10 @@ class C_Signup extends CI_Controller
         $this->load->view('sign/V_Signup');
     }
     function confirm()
-    {
-        $data['nik']        =   $this->input->post('nik');
         $data['nama']       =   $this->input->post('username');
-        $data['email']      =   $this->input->post('email');
+        $data['nik']        =   $this->input->post('nik');
         $data['password']   =   sha1($this->input->post('password'));
+        $data['email']      =   $this->input->post('email');
         $data['alamat']     =   $this->input->post('alamat');
         $pass               =   $this->input->post('password');
         $cpass              =   $this->input->post('repassword');

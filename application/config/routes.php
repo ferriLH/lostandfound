@@ -55,6 +55,7 @@ $route['login']                 = 'C_Login';
 $route['login/auth']            = 'C_Login/auth';
 $route['signup']                = 'C_Signup';
 $route['signup/confirm']        = 'C_Signup/confirm';
+$route['explore']               = 'C_List';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
 
