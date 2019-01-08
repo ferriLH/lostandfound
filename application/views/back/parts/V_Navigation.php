@@ -13,8 +13,8 @@ $status = $this->session->userdata('status');
         <div class="container">
             <div class="header4-wrap">
                 <div class="header__logo">
-                    <a href="#">
-                        <img src="<?php echo base_url();?>/assets/back/CoolAdmin-master/images/icon/logo-blue.png" alt="CoolAdmin" />
+                    <a href="<?php echo base_url('dashboard');?>">
+                        <img src="<?php echo base_url();?>/assets/front/img/core-img/lf.png" alt="CoolAdmin" />
                     </a>
                 </div>
                 <div class="header__tool">

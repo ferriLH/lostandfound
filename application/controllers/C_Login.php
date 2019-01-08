@@ -99,7 +99,7 @@ class C_Login extends CI_Controller {
             'smtp_host' => 'ssl://smtp.gmail.com',
             'smtp_port' => '465',
             'smtp_user' => 'emailhapticproject@gmail.com',
-            'smtp_pass' => 'HapticProject2018', // change it to yours
+            'smtp_pass' => 'NgentodSampeMampus2019', // change it to yours
             'mailtype' => 'html',
             'charset' => 'iso-8859-1',
             'wordwrap' => TRUE,

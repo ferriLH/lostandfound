@@ -13,7 +13,7 @@
     <title><?php echo $title;?></title>
 
     <!-- Favicon -->
-    <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.ico')?>">
+    <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.png')?>">
 
     <!-- Fontfaces CSS-->
     <link href="<?php echo base_url();?>/assets/back/CoolAdmin-master/css/font-face.css" rel="stylesheet" media="all">

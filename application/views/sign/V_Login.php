@@ -5,7 +5,7 @@
     <title><?php echo $title;?></title>
 
     <!-- Favicon -->
-    <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.ico')?>">
+    <link rel="icon" href="<?php echo base_url('assets/front/img/core-img/favicon.png')?>">
     <style>
         a.txt1 {
             font-family: ;
