@@ -31,7 +31,7 @@ $this->load->view("front/parts/V_Navigation");
                         </div>
                         <div class="feature-content d-flex align-items-center justify-content-between">
                             <div class="feature-title">
-                                <h5><?php echo $b->nama_barang; ?></h5>
+                                <h5><?php echo anchor('C_Detailstuff/index/'.$b->id_barang,$b->nama_barang) ?></h5>
                                 <p><?php echo $b->nama_kota;?></p>
                                 <p><?php echo $b->nama;?></p>
                             </div>
