@@ -8,7 +8,7 @@ $this->load->view("front/parts/V_Navigation");
         <div class="row h-100 align-items-center justify-content-center">
             <div class="col-12 col-md-10">
                 <div class="hero-content">
-                    <h2>Discover your stuff here</h2>
+                    <h2 id="s">Discover your stuff here</h2>
                     <h4>This is the best dashboard of your lossing stuff</h4>
                 </div>
                 <!-- Hero Search Form -->
@@ -22,27 +22,27 @@ $this->load->view("front/parts/V_Navigation");
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                             <h6>What are you looking for?</h6>
-                            <form action="#" method="get">
-                                <input size=70%" type="text">
+                            <form action="<?php echo base_url('explore/search')?>" method="get">
+                                <input size=70%" type="text" name="keyword">
                                 <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
                             </form>
                         </div>
                         <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
                             <h6>What are you looking for?</h6>
-                            <form action="#" method="get">
-                                <select class="custom-select">
+                            <form action="<?php echo base_url('explore/advancedsearch')?>" method="get">
+                                <select class="custom-select" name="label">
                                     <option selected>Label</option>
                                      <?php foreach ($label as $l):?>
                                      <option value=<?php print_r($l->nama_label);?>><?php print_r($l->nama_label);?></option>
                                      <?php endforeach;?>
                                 </select>
-                                <select class="custom-select">
+                                <select class="custom-select" name="nama_kota">
                                     <option selected>Area</option>
                                     <?php foreach ($kota as $k):?>
                                      <option value=<?php print_r($k->nama_kota);?>><?php print_r($k->nama_kota);?></option>
                                      <?php endforeach;?>
                                 </select>
-                                <select class="custom-select">
+                                <select class="custom-select" name="univ">
                                     <option selected>university</option>
                                     <?php foreach ($univ as $u):?>
                                      <option value=<?php print_r($u->nama_univ);?>><?php print_r($u->nama_univ);?></option>
@@ -170,11 +170,11 @@ $this->load->view("front/parts/V_Navigation");
                     <img src="<?php echo base_url('assets/front/img/bg-img/editor-1.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
-                            <a href="#">Midtown of Bandung</a>
-                            <a href="#">1643 Informations</a>
+                            <a href="<?php echo base_url('C_List/byCity/1')?>">Midtown of Bandung</a>
+<!--                            <a href="#">1643 Informations</a>-->
                         </div>
                         <div class="add-more">
-                            <a href="#">+</a>
+<!--                            <a href="#">+</a>-->
                         </div>
                     </div>
                 </div>
@@ -184,11 +184,11 @@ $this->load->view("front/parts/V_Navigation");
                     <img src="<?php echo base_url('assets/front/img/bg-img/editor-2.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
-                            <a href="#">West Bandung</a>
-                            <a href="#">943 Information</a>
+                            <a href="<?php echo base_url('C_List/byCity/2')?>">West Bandung</a>
+<!--                            <a href="#">943 Information</a>-->
                         </div>
                         <div class="add-more">
-                            <a href="#">+</a>
+<!--                            <a href="#">+</a>-->
                         </div>
                     </div>
                 </div>
@@ -196,11 +196,11 @@ $this->load->view("front/parts/V_Navigation");
                     <img src="<?php echo base_url('assets/front/img/bg-img/editor-3.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
-                            <a href="#">East Bandung</a>
-                            <a href="#">243 Information</a>
+                            <a href="<?php echo base_url('C_List/byCity/3')?>">East Bandung</a>
+<!--                            <a href="#">243 Information</a>-->
                         </div>
                         <div class="add-more">
-                            <a href="#">+</a>
+<!--                            <a href="#">+</a>-->
                         </div>
                     </div>
                 </div>
@@ -212,11 +212,11 @@ $this->load->view("front/parts/V_Navigation");
                         <img src="<?php echo base_url('assets/front/img/bg-img/editor-1.jpg')?>" alt="">
                         <div class="editors-pick-info">
                             <div class="places-total-destinations d-flex">
-                                <a href="#">Midtown of Cimahi</a>
-                                <a href="#">43 Informations</a>
+                                <a href="<?php echo base_url('C_List/byCity/4')?>">Midtown of Cimahi</a>
+<!--                                <a href="#">43 Informations</a>-->
                             </div>
                             <div class="add-more">
-                                <a href="#">+</a>
+<!--                                <a href="#">+</a>-->
                             </div>
                         </div>
                     </div>
@@ -226,11 +226,11 @@ $this->load->view("front/parts/V_Navigation");
                         <img src="<?php echo base_url('assets/front/img/bg-img/editor-2.jpg')?>" alt="">
                         <div class="editors-pick-info">
                             <div class="places-total-destinations d-flex">
-                                <a href="#">South Bandung</a>
-                                <a href="#">94 Informations</a>
+                                <a href="<?php echo base_url('C_List/byCity/5')?>">South Bandung</a>
+<!--                                <a href="#">94 Informations</a>-->
                             </div>
                             <div class="add-more">
-                                <a href="#">+</a>
+<!--                                <a href="#">+</a>-->
                             </div>
                         </div>
                     </div>
@@ -238,11 +238,11 @@ $this->load->view("front/parts/V_Navigation");
                         <img src="<?php echo base_url('assets/front/img/bg-img/editor-3.jpg')?>" alt="">
                         <div class="editors-pick-info">
                             <div class="places-total-destinations d-flex">
-                                <a href="#">North and South Cimahi </a>
-                                <a href="#">243 Informations</a>
+                                <a href="<?php echo base_url('C_List/byCity/6')?>">North and South Cimahi </a>
+<!--                                <a href="#">243 Informations</a>-->
                             </div>
                             <div class="add-more">
-                                <a href="#">+</a>
+<!--                                <a href="#">+</a>-->
                             </div>
                         </div>
                     </div>

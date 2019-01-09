@@ -4,7 +4,7 @@ $this->load->view("front/parts/V_Header");
 $this->load->view("front/parts/V_Navigation");
 ?>
     <!-- ***** Breadcumb Area Start ***** -->
-    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/hero-1.jpg)"></div>
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(<?php echo base_url('assets/front/img/bg-img/hero-1.jpg') ?>)"></div>
     <!-- ***** Breadcumb Area End ***** -->
 
     <!-- ***** Listing Destinations Area Start ***** -->
@@ -42,6 +42,9 @@ $this->load->view("front/parts/V_Navigation");
                     </div>
                 </div>
                 <?php }?>
+            </div>
+        </div>
+    </section>
                 
     <!-- ***** Listing Destinations Area End ***** -->
 
