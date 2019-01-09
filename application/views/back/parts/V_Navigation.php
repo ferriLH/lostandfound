@@ -80,7 +80,7 @@ $status = $this->session->userdata('status');
                                 </div>
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
-                                        <a href="#">
+                                        <a href="<?php echo base_url('profile');?>">
                                             <i class="zmdi zmdi-account"></i>Account</a>
                                     </div>
                                 </div>
@@ -96,28 +96,18 @@ $status = $this->session->userdata('status');
         </div>
     </header>
     <!-- END HEADER DESKTOP -->
+    <?php
+    if($this->uri->segment(1)=='profile'){
+        ?>
 
+    <?php
+    }else{
+    ?>
     <!-- WELCOME-->
     <section class="welcome2 p-t-40 p-b-55">
         <div class="container">
-<!--            <div class="row">-->
-<!--                <div class="col-md-12">-->
-<!--                    <div class="au-breadcrumb3">-->
-<!--                        <div class="au-breadcrumb-left">-->
-<!--                            <span class="au-breadcrumb-span">You are here:</span>-->
-<!--                            <ul class="list-unstyled list-inline au-breadcrumb__list">-->
-<!--                                <li class="list-inline-item active">-->
-<!--                                    <a href="#">Home</a>-->
-<!--                                </li>-->
-<!--                                <li class="list-inline-item seprate">-->
-<!--                                    <span>/</span>-->
-<!--                                </li>-->
-<!--                                <li class="list-inline-item">Dashboard</li>-->
-<!--                            </ul>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="welcome2-inner m-t-60">
@@ -138,21 +128,14 @@ $status = $this->session->userdata('status');
         </div>
     </section>
     <!-- END WELCOME-->
+        <?php
+    }
+    ?>
     <!-- PAGE CONTENT-->
     <div class="page-container3">
-        <section class="alert-wrap p-t-70 p-b-70">
+        <section class="alert-wrap p-t-35 p-b-35">
             <div class="container">
-                <!-- ALERT-->
-                <!--            <div class="alert au-alert-success alert-dismissible fade show au-alert au-alert--70per" role="alert">-->
-                <!--                <i class="zmdi zmdi-check-circle"></i>-->
-                <!--                <span class="content">You successfully read this important alert message.</span>-->
-                <!--                <button class="close" type="button" data-dismiss="alert" aria-label="Close">-->
-                <!--                            <span aria-hidden="true">-->
-                <!--                                <i class="zmdi zmdi-close-circle"></i>-->
-                <!--                            </span>-->
-                <!--                </button>-->
-                <!--            </div>-->
-                <!-- END ALERT-->
+
             </div>
         </section>
         <section>
@@ -168,15 +151,35 @@ $status = $this->session->userdata('status');
                                             <i class="fas fa-tachometer-alt"></i>Dashboard
                                         </a>
                                     </li>
+                                    <li class="<?php if($this->uri->segment(1)=='profile'){echo 'active';}?> has-sub">
+                                        <a class="js-arrow" href="<?php echo base_url('profile')?>">
+                                            <i class="fas fa-user"></i>Account
+                                        </a>
+                                    </li>
                                     <li>
                                         <a href="<?php echo base_url();?>/assets/back/CoolAdmin-master/inbox.html">
                                             <i class="fas fa-chart-bar"></i>Inbox</a>
                                         <span class="inbox-num">3</span>
                                     </li>
-                                    <li>
-                                        <a href="<?php echo base_url();?>">
-                                            <i class="fas fa-plus"></i>Add discovery things</a>
+                                    <li class="has-sub">
+                                        <a class="js-arrow" href="# ">
+                                            <i class="fas fa-box"></i>Stuffs
+                                            <span class="arrow">
+                                                    <i class="fas fa-angle-down"></i>
+                                                </span>
+                                        </a>
+                                        <ul class="list-unstyled navbar__sub-list js-sub-list">
+                                            <li>
+                                                <a href="<?php echo base_url();?>">
+                                                    <i class="fas fa-plus"></i>Add</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url();?>">
+                                                    <i class="fas fa-edit"></i>Edit</a>
+                                            </li>
+                                        </ul>
                                     </li>
+
                                 </ul>
                             </nav>
                         </aside>

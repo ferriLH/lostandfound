@@ -60,6 +60,7 @@ $route['login/forget_auth']     = 'C_Login/forget_auth';
 $route['signup']                = 'C_Signup';
 $route['signup/confirm']        = 'C_Signup/confirm';
 $route['explore']               = 'C_List';
+$route['profile']               = 'C_Profile';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
 
