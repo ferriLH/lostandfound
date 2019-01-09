@@ -5,6 +5,8 @@ $nama   = $this->session->userdata('nama');
 $email  = $this->session->userdata('email');
 $alamat = $this->session->userdata('alamat');
 $status = $this->session->userdata('status');
+$foto   = $this->session->userdata('file_foto');
+
 ?>
 <body class="animsition">
 <div class="page-wrapper">
@@ -59,7 +61,7 @@ $status = $this->session->userdata('status');
                     <div class="account-wrap">
                         <div class="account-item account-item--style2 clearfix js-item-menu">
                             <div class="image">
-                                <img src="<?php echo base_url();?>/assets/back/CoolAdmin-master/images/icon/avatar-01.jpg" alt="" />
+                                <img src="<?php echo base_url();?>/foto_user/<?php echo $foto;?>" alt="<?php echo $nama;?>" />
                             </div>
                             <div class="content">
                                 <a class="js-acc-btn" href="#"><?php echo $nama;?></a>
@@ -68,7 +70,7 @@ $status = $this->session->userdata('status');
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="<?php echo base_url();?>/assets/back/CoolAdmin-master/images/icon/avatar-01.jpg" alt="<?php echo $nama;?>" />
+                                            <img src="<?php echo base_url();?>/foto_user/<?php echo $foto;?>" alt="<?php echo $nama;?>" />
                                         </a>
                                     </div>
                                     <div class="content">
@@ -97,17 +99,15 @@ $status = $this->session->userdata('status');
     </header>
     <!-- END HEADER DESKTOP -->
     <?php
-    if($this->uri->segment(1)=='profile'){
+    if($this->uri->segment(1)!='dashboard'){
         ?>
 
     <?php
     }else{
     ?>
     <!-- WELCOME-->
-    <section class="welcome2 p-t-40 p-b-55">
+    <section class="welcome2 p-t-40 p-b-55" >
         <div class="container">
-
-
             <div class="row">
                 <div class="col-md-12">
                     <div class="welcome2-inner m-t-60">
@@ -116,12 +116,12 @@ $status = $this->session->userdata('status');
                                 <span><?php echo $nama;?></span>, Welcome back</h1>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
-                        <form class="form-header form-header2" action="" method="post">
-                            <input class="au-input au-input--w435" type="text" name="search" placeholder="Search for datas &amp; reports...">
-                            <button class="au-btn--submit" type="submit">
-                                <i class="zmdi zmdi-search"></i>
-                            </button>
-                        </form>
+<!--                        <form class="form-header form-header2" action="" method="post">-->
+<!--                            <input class="au-input au-input--w435" type="text" name="search" placeholder="Search for datas &amp; reports...">-->
+<!--                            <button class="au-btn--submit" type="submit">-->
+<!--                                <i class="zmdi zmdi-search"></i>-->
+<!--                            </button>-->
+<!--                        </form>-->
                     </div>
                 </div>
             </div>
@@ -156,25 +156,25 @@ $status = $this->session->userdata('status');
                                             <i class="fas fa-user"></i>Account
                                         </a>
                                     </li>
-                                    <li>
+                                    <li class="<?php if($this->uri->segment(1)=='inbox'){echo 'active';}?> has-sub">
                                         <a href="<?php echo base_url();?>/assets/back/CoolAdmin-master/inbox.html">
                                             <i class="fas fa-chart-bar"></i>Inbox</a>
                                         <span class="inbox-num">3</span>
                                     </li>
-                                    <li class="has-sub">
-                                        <a class="js-arrow" href="# ">
+                                    <li class="<?php if($this->uri->segment(1)=='stuffs' || $this->uri->segment(1)=='C_Stuff'){echo 'active';}?> has-sub">
+                                        <a class="js-arrow" href="#">
                                             <i class="fas fa-box"></i>Stuffs
                                             <span class="arrow">
                                                     <i class="fas fa-angle-down"></i>
                                                 </span>
                                         </a>
                                         <ul class="list-unstyled navbar__sub-list js-sub-list">
-                                            <li>
-                                                <a href="<?php echo base_url();?>">
+                                            <li class="<?php if($this->uri->segment(2)=='add'){echo 'active';}?> ">
+                                                <a href="<?php echo base_url('stuffs/add');?>">
                                                     <i class="fas fa-plus"></i>Add</a>
                                             </li>
-                                            <li>
-                                                <a href="<?php echo base_url();?>">
+                                            <li class="<?php if($this->uri->segment(2)=='edit_stuffs'){echo 'active';}?> ">
+                                                <a href="<?php echo base_url('C_Stuff/edit_stuffs/');echo $this->session->userdata('id_user');?>">
                                                     <i class="fas fa-edit"></i>Edit</a>
                                             </li>
                                         </ul>

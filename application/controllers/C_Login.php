@@ -19,7 +19,7 @@ class C_Login extends CI_Controller {
             redirect('dashboard');
         }else{
             $data = array(
-                "title" => "Login |st an Lod Found"
+                "title" => "Login | Lost and Found"
             );
             $this->load->view('sign/V_Login',$data);
         }
@@ -44,6 +44,7 @@ class C_Login extends CI_Controller {
                     $sess_data['password']      = $dat->password;
                     $sess_data['alamat']        = $dat->alamat;
                     $sess_data['status']        = $dat->status;
+                    $sess_data['file_foto']     = $dat->file_foto;
                     $this->session->set_userdata($sess_data);
                 }
                 redirect('dashboard');

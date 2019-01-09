@@ -2,55 +2,98 @@
  $this->load->view("front/parts/V_Header");
  $this->load->view("front/parts/V_Navigation");
 ?>
+    <!-- ***** Breadcumb Area Start ***** -->
+    <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(<?php echo base_url()?>assets/front/img/bg-img/hero-1.jpg)"></div>
+    <!-- ***** Breadcumb Area End ***** -->
 
-    <!-- Modal: modalPoll -->
-    <div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-         aria-hidden="true" data-backdrop="false">
-        <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
-            <div class="modal-content">
-                <!--Header-->
-                <div class="modal-header">
-                    <p class="heading lead">Send Messege
-                    </p>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true" class="white-text">×</span>
-                    </button>
-                </div>
-
-                <!--Body-->
-                <div class="modal-body">
-                    <div class="text-center">
-                        <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
-                        <p>
-                            <strong>Send Messege to founder here !</strong>
+    <?php
+    if ($this->session->userdata('isLogin') == TRUE) {
+    ?>
+        <!-- Modal: modalPoll -->
+        <div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true" data-backdrop="false">
+            <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading lead">Send Messege
                         </p>
 
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">×</span>
+                        </button>
                     </div>
 
-                    <hr>
-                    <div class="md-form">
-                        <textarea type="text" id="subject" class="md-textarea form-control" rows="1" placeholder="Subject"></textarea>
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+                            <p>
+                                <strong>Send Messege to founder here !</strong>
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="md-form">
+                            <textarea type="text" id="subject" class="md-textarea form-control" rows="1" placeholder="Subject"></textarea>
+                        </div>
+                        <!--Basic textarea-->
+                        <div class="md-form">
+                            <textarea type="text" id="isi_pesan" class="md-textarea form-control" rows="3" placeholder="Your message"></textarea>
+                        </div>
                     </div>
-                    <!--Basic textarea-->
-                    <div class="md-form">
-                        <textarea type="text" id="isi_pesan" class="md-textarea form-control" rows="3" placeholder="Your message"></textarea>
-
+                    <!--Footer-->
+                    <div class="modal-footer justify-content-center">
+                        <a type="button" class="btn btn-primary waves-effect waves-light">Send
+                            <i class="fa fa-paper-plane ml-1"></i>
+                        </a>
+                        <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
                     </div>
-
-                </div>
-
-                <!--Footer-->
-                <div class="modal-footer justify-content-center">
-                    <a type="button" class="btn btn-primary waves-effect waves-light">Send
-                        <i class="fa fa-paper-plane ml-1"></i>
-                    </a>
-                    <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Modal: modalPoll -->
+        <!-- Modal: modalPoll -->
+
+    <?php
+    }else{
+    ?>
+        <!-- Modal: modalPoll -->
+        <div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+             aria-hidden="true" data-backdrop="false">
+            <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+                <div class="modal-content">
+                    <!--Header-->
+                    <div class="modal-header">
+                        <p class="heading lead">Login First
+                        </p>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">×</span>
+                        </button>
+                    </div>
+
+                    <!--Body-->
+                    <div class="modal-body">
+                        <div class="text-center">
+                            <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+                            <p>
+                                <strong>You must login first before sending message!</strong>
+                            </p>
+                        </div>
+                        <hr>
+                        <center>
+                        <a href="<?php echo base_url('login')?>" type="button" class="btn btn-primary waves-effect waves-light">Click Here
+                            <i class="fa fa-sign-in ml-1"></i>
+                        </a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal: modalPoll -->
+
+        <?php
+    }
+    ?>
 
     <!-- ***** Single Listing Area Start ***** -->
     <br>
@@ -73,19 +116,11 @@
                             <h6><?php echo $b->nama_univ;?></h6>
                             <h6><?php echo $b->tanggal_upload;?></h6>
                         </div>
-
-
-
-
-
                         <div class="overview-content mt-50" id="overview">
                             <!-- <textarea rows="4" cols="50"> -->
                             <p align="center"><?php echo $b->deskripsi;?></p>
                         <!-- </textarea> -->
                         </div>
-                            
-
-
                     </div>
                 </div>
 
@@ -109,7 +144,7 @@
                         
                         <!-- Author Widget -->
                         <div class="author-widget mt-50 d-flex align-items-center">
-                            <img src="img/clients-img/1.jpg" alt="">
+                            <img src="<?php echo base_url()?>assets/front/img/clients-img/1.jpg" alt="">
                             <div class="authors-name">
                                 <a href="#"><?php echo $b->nama;?></a>
                                 <p>Sang Penemu</p>

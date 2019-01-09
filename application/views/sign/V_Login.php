@@ -47,10 +47,8 @@
     <link href="<?php echo base_url('assets/sign/')?>css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
     <link href="<?php echo base_url('assets/sign/')?>css/style2.css" rel='stylesheet' type='text/css' media="all" />
     <link href="<?php echo base_url('assets/sign/')?>css/bootstrap.min.css" rel='stylesheet' type='text/css' media="all" />
-    <!-- /css -->
-    <script src="<?php echo base_url('assets/sign/js/bootstrap.min.js')?>"></script>
-    <script src="<?php echo base_url('assets/sign/js/jquery-3.2.1.min.js')?>"></script>
 
+    <!-- /css -->
 
 </head>
 <body>
@@ -109,6 +107,8 @@
 
     </div>
 </div>
+<script src="<?php echo base_url()?>assets/back/CoolAdmin-master/vendor/jquery/dist/jquery.min.js"></script>
+<script src="<?php echo base_url()?>assets/back/CoolAdmin-master/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
 </body>
 </html>

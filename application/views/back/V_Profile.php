@@ -13,9 +13,12 @@ $this->load->view("back/parts/V_Navigation");
     <div class="page-content">
         <div class="row">
             <div class="col-md-12">
-                <div id="w">
+                <div class="card">
+                    <div class="card-header">
+
+                    </div>
                     <div id="content" class="clearfix">
-                        <div id="userphoto"><img src="<?php echo base_url();?>assets/back/profile/images/avatar.png" alt="default avatar"></div>
+                        <div id="userphoto"><img width="200px" src="<?php echo base_url();?>/foto_user/<?php echo $this->session->userdata('file_foto');?>" alt="<?php echo $this->session->userdata('nama');?>"></div>
                         <h1>Minimal User Profile Layout</h1>
 
                         <nav id="profiletabs">
@@ -53,9 +56,9 @@ $this->load->view("back/parts/V_Navigation");
                             <p>Friends list:</p>
 
                             <ul id="friendslist" class="clearfix">
-                                <li><a href="#"><img src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> Username</a></li>
-                                <li><a href="#"><img src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> SomeGuy123</a></li>
-                                <li><a href="#"><img src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> PurpleGiraffe</a></li>
+                                <li><a href="#"><img alt src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> Username</a></li>
+                                <li><a href="#"><img alt src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> SomeGuy123</a></li>
+                                <li><a href="#"><img alt src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> PurpleGiraffe</a></li>
                             </ul>
                         </section>
 

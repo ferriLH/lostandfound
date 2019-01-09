@@ -49,21 +49,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller']            = 'C_Home';
-$route['home']                          = 'C_Home';
-$route['dashboard']                     = 'C_Dashboard';
-$route['login']                         = 'C_Login';
-$route['login/auth']                    = 'C_Login/auth';
-$route['logout']                        = 'C_Login/logout';
-$route['forget_pass']                   = 'C_Login/forget';
-$route['login/forget_auth']             = 'C_Login/forget_auth';
-$route['signup']                        = 'C_Signup';
-$route['signup/confirm']                = 'C_Signup/confirm';
-$route['explore']                       = 'C_List';
+$route['default_controller']    = 'C_Home';
+$route['home']                  = 'C_Home';
+$route['dashboard']             = 'C_Dashboard';
+$route['login']                 = 'C_Login';
+$route['login/auth']            = 'C_Login/auth';
+$route['logout']                = 'C_Login/logout';
+$route['forget_pass']           = 'C_Login/forget';
+$route['login/forget_auth']     = 'C_Login/forget_auth';
+$route['signup/confirm']        = 'C_Signup/confirm';
+$route['explore']               = 'C_List';
 $route['explore/search']                = 'C_List/search';
 $route['explore/advancedsearch']        = 'C_List/advancedsearch';
-$route['profile']                       = 'C_Profile';
 $route['contact']                       = 'C_Contactus';
-$route['404_override']                  = '';
-$route['translate_uri_dashes']          = FALSE;
+$route['profile']               = 'C_Profile';
+$route['stuffs/add']            = 'C_Stuff/add_stuffs';
+$route['404_override']          = '';
+$route['translate_uri_dashes']  = FALSE;
 

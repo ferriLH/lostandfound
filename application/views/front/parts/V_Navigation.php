@@ -52,9 +52,22 @@
 <!--                            <a href="--><?php //echo base_url('login')?><!--">Sign in  and Register</a>-->
 <!--                        </div>-->
                         <!-- Add listings btn -->
-                        <div class="dorne-add-listings-btn">
-                            <a href="<?php echo base_url('login')?>" class="btn dorne-btn">Sign in and Register</a>
-                        </div>
+                        <?php
+                        if ($this->session->userdata('isLogin') == TRUE) {
+                            ?>
+                            <div class="dorne-add-listings-btn">
+                                <a href="<?php echo base_url('dashboard')?>" class="btn dorne-btn">Dashboard</a>
+                            </div>
+                            <?php
+                        }else{
+                            ?>
+                            <div class="dorne-add-listings-btn">
+                                <a href="<?php echo base_url('login')?>" class="btn dorne-btn">Sign in and Register</a>
+                            </div>
+                            <?php
+                        }
+                        ?>
+
                     </div>
                 </nav>
             </div>
