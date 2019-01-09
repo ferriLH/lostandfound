@@ -1,10 +1,56 @@
 <?php 
  $this->load->view("front/parts/V_Header");
- $this->load->view("front/parts/V_Navigation")
+ $this->load->view("front/parts/V_Navigation");
 ?>
 
+    <!-- Modal: modalPoll -->
+    <div class="modal fade right" id="modalPoll-1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Send Messege
+                    </p>
 
-    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">×</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+                        <p>
+                            <strong>Send Messege to founder here !</strong>
+                        </p>
+
+                    </div>
+
+                    <hr>
+                    <div class="md-form">
+                        <textarea type="text" id="subject" class="md-textarea form-control" rows="1" placeholder="Subject"></textarea>
+                    </div>
+                    <!--Basic textarea-->
+                    <div class="md-form">
+                        <textarea type="text" id="isi_pesan" class="md-textarea form-control" rows="3" placeholder="Your message"></textarea>
+
+                    </div>
+
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer justify-content-center">
+                    <a type="button" class="btn btn-primary waves-effect waves-light">Send
+                        <i class="fa fa-paper-plane ml-1"></i>
+                    </a>
+                    <a type="button" class="btn btn-outline-primary waves-effect" data-dismiss="modal">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: modalPoll -->
 
     <!-- ***** Single Listing Area Start ***** -->
     <br>
@@ -28,16 +74,9 @@
                             <h6><?php echo $b->tanggal_upload;?></h6>
                         </div>
 
-                        <!-- <div class="single-listing-nav">
-                            <nav>
-                                <ul id="listingNav">
-                                    <li class="active"><a href="#overview">Overview</a></li>
-                                    <li><a href="#menu">Menu</a></li>
-                                    <li><a href="#review">Reviews</a></li>
-                                    <li><a href="#lomap">Location on map</a></li>
-                                </ul>
-                            </nav>
-                        </div> -->
+
+
+
 
                         <div class="overview-content mt-50" id="overview">
                             <!-- <textarea rows="4" cols="50"> -->
@@ -57,6 +96,7 @@
                         <!-- Listing Verify -->
                         <div class="listing-verify">
                             <a href="#" class="btn dorne-btn w-100"><i class="fa fa-check pr-3"></i> Claim This Stuff</a>
+                            <button type="button" class="btn dorne-btn w-100" data-toggle="modal" data-target="#modalPoll-1">Send Messege</button>
                         </div>
 
                         <!-- FOTO BARANG -->

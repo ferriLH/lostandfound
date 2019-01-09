@@ -19,7 +19,7 @@ class C_Login extends CI_Controller {
             redirect('dashboard');
         }else{
             $data = array(
-                "title" => "Login | Lost and Found"
+                "title" => "Login |st an Lod Found"
             );
             $this->load->view('sign/V_Login',$data);
         }
