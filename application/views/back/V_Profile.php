@@ -1,7 +1,7 @@
 <?php
 $this->load->view("back/parts/V_Header");
 $this->load->view("back/parts/V_Navigation");
-
+$id = $this->session->userdata('id_user');
 ?>
 <link rel="shortcut icon" href="http://designshack.net/favicon.ico">
 <link rel="icon" href="http://designshack.net/favicon.ico">
@@ -18,64 +18,158 @@ $this->load->view("back/parts/V_Navigation");
 
                     </div>
                     <div id="content" class="clearfix">
-                        <div id="userphoto"><img width="200px" src="<?php echo base_url();?>/foto_user/<?php echo $this->session->userdata('file_foto');?>" alt="<?php echo $this->session->userdata('nama');?>"></div>
-                        <h1>Minimal User Profile Layout</h1>
+                        <?php
+                        if (validation_errors() || $this->session->flashdata('success')) {
+                            ?>
+                            <div class="alert alert-success">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Success</strong>
+                                <?php echo validation_errors(); ?>
+                                <?php echo $this->session->flashdata('success'); ?>
+                            </div>
+                        <?php } ?>
+                        <?php
+                        if (validation_errors() || $this->session->flashdata('failed')) {
+                            ?>
+                            <div class="alert alert-danger">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Success</strong>
+                                <?php echo validation_errors(); ?>
+                                <?php echo $this->session->flashdata('failed'); ?>
+                            </div>
+                        <?php } ?>
 
+                        <div id="userphoto"><img width="150px" src="<?php echo base_url();?>/foto_user/<?php echo $this->session->userdata('file_foto');?>" alt="<?php echo $this->session->userdata('nama');?>"></div>
+                        <h1>Minimal User Profile Layout</h1>
                         <nav id="profiletabs">
                             <ul class="clearfix">
                                 <li><a href="#bio" class="sel">Bio</a></li>
-                                <li><a href="#activity">Activity</a></li>
-                                <li><a href="#friends">Friends</a></li>
+                                <li><a href="#cpassword">Change Password</a></li>
+                                <li><a href="#photo">Change Photo</a></li>
                                 <li><a href="#settings">Settings</a></li>
                             </ul>
                         </nav>
 
                         <section id="bio">
-                            <p>Various content snippets courtesy of <a href="http://bluthipsum.com/">Bluth Ipsum</a>.</p>
-
-                            <p>Can't a guy call his mother pretty without it seeming strange? Amen. I think that's one of Mom's little fibs, you know, like I'll sacrifice anything for my children.</p>
-
-                            <p>She's always got to wedge herself in the middle of us so that she can control everything. Yeah. Mom's awesome. I run a pretty tight ship around here. With a pool table.</p>
+                            <p>Edit your Bio :</p>
+                            <div class="form-inline">
+                                <div class="form-group">
+                                    <p class="setting">
+                                        <span>Your ID</span>
+                                        <b class="form-control"><?php echo $id;?></b>
+                                    </p>
+                                </div>
+                            </div>
+                            <form class="form-inline" action="<?php echo base_url('C_Profile/update_nik/'.$id)?>" method="post">
+                                <div class="form-group">
+                                    <p class="setting">
+                                        <span>NIK
+                                            <button type="submit"><img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></button>
+                                        </span>
+                                        <input class="form-control" name="nik" required type="number" value="<?php echo $this->session->userdata('nik');?>">
+                                    </p>
+                                </div>
+                            </form>
+                            <form class="form-inline" action="<?php echo base_url('C_Profile/update_nama/'.$id)?>" method="post">
+                                <div class="form-group">
+                                    <p class="setting">
+                                        <span>Name
+                                            <button type="submit"><img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></button>
+                                        </span>
+                                        <input class="form-control" name="name" required type="text" value="<?php echo $this->session->userdata('nama');?>">
+                                    </p>
+                                </div>
+                            </form>
+                            <form class="form-inline" action="<?php echo base_url('C_Profile/update_email/'.$id)?>" method="post">
+                                <div class="form-group">
+                                    <p class="setting">
+                                        <span>Email
+                                            <button type="submit"><img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></button>
+                                        </span>
+                                        <input class="form-control" required name="email" type="email" value="<?php echo $this->session->userdata('email');?>">
+                                    </p>
+                                </div>
+                            </form>
+                            <form class="form-inline" action="<?php echo base_url('C_Profile/update_address/'.$id)?>" method="post">
+                                <div class="form-group">
+                                    <p class="setting">
+                                        <span>Address
+                                            <button type="submit"><img src='<?php echo base_url();?>assets/back/profile/images/edit.png' alt='Edit'></button>
+                                        </span>
+                                        <input class="form-control" required name="address" type="text" value="<?php echo $this->session->userdata('alamat');?>">
+                                    </p>
+                                </div>
+                            </form>
                         </section>
 
-                        <section id="activity" class="hidden">
-                            <p>Most recent actions:</p>
-
-                            <p class="activity">@10:15PM - Submitted a news article</p>
-
-                            <p class="activity">@9:50PM - Submitted a news article</p>
-
-                            <p class="activity">@8:15PM - Posted a comment</p>
-
-                            <p class="activity">@4:30PM - Added <strong>someusername</strong> as a friend</p>
-
-                            <p class="activity">@12:30PM - Submitted a news article</p>
+                        <section id="cpassword" class="hidden">
+                            <p>Change your Password :</p>
+                            <form action="<?php echo base_url('C_Profile/update_password/'.$id)?>" method="post">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <p class="setting">
+                                            <span>Current Password</span>
+                                            <input class="form-control" required type="password" name="current">
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="setting">
+                                            <span>New Password</span>
+                                            <input class="form-control" required type="password" name="new">
+                                        </p>
+                                    </div>
+                                    <div class="form-group">
+                                        <p class="setting">
+                                            <span>Confirm Password</span>
+                                            <input class="form-control" required type="password" name="confirm">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                        <button class="btn btn-danger" type="reset">Clear</button>
+                                    </div>
+                                </div>
+                            </form>
                         </section>
 
-                        <section id="friends" class="hidden">
-                            <p>Friends list:</p>
-
-                            <ul id="friendslist" class="clearfix">
-                                <li><a href="#"><img alt src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> Username</a></li>
-                                <li><a href="#"><img alt src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> SomeGuy123</a></li>
-                                <li><a href="#"><img alt src="<?php echo base_url();?>assets/back/profile/images/avatar.png" width="22" height="22"> PurpleGiraffe</a></li>
-                            </ul>
-                        </section>
+                        <section id="photo" class="hidden">
+                            <p>Change Photo:</p>
+                            <form action="<?php echo base_url('C_Profile/update_photo/'.$id)?>" method="post" enctype="multipart/form-data">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <p class="setting">
+                                            <span></span>
+                                            <input class="form-control" required type="file" name="foto">
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary" type="submit">Submit</button>
+                                        <button class="btn btn-danger" type="reset">Clear</button>
+                                    </div>
+                                </div>
+                            </form>                        </section>
 
                         <section id="settings" class="hidden">
                             <p>Edit your user settings:</p>
-
-                            <p class="setting"><span>E-mail Address <img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></span> lolno@gmail.com</p>
-
-                            <p class="setting"><span>Language <img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></span> English(US)</p>
-
-                            <p class="setting"><span>Profile Status <img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></span> Public</p>
-
-                            <p class="setting"><span>Update Frequency <img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></span> Weekly</p>
-
-                            <p class="setting"><span>Connected Accounts <img src="<?php echo base_url();?>assets/back/profile/images/edit.png" alt="*Edit*"></span> None</p>
+                            <form action="<?php echo base_url('C_Profile/delete/'.$id)?>" method="post">
+                                <div class="form-inline">
+                                    <div class="form-group">
+                                        <p class="setting">
+                                            <span>Delete your account</span>
+                                            <button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i></button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
                         </section>
                     </div><!-- @end #content -->
+                    <div class="card-footer">
+
+                    </div>
                 </div><!-- @end #w -->
                 <script type="text/javascript">
                     $(function(){
