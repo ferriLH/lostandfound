@@ -53,14 +53,14 @@ $this->load->view("back/parts/V_Navigation");
                             <?php echo $this->session->flashdata('result'); ?>
                         </div>
                     <?php } ?>
-                    <form autocomplete="off" action="<?php echo base_url('C_Stuff/add/');echo $this->session->userdata('id_user');?>" method="post" enctype="multipart/form-data" class="form-horizontal">
+                    <form autocomplete="off" action="<?php echo base_url('C_Stuff/update_stuffs_auth/');echo $barang->row()->id_barang."/";echo $barang->row()->id_user;?>" method="post" enctype="multipart/form-data" class="form-horizontal">
                         <div class="card-body card-block">
                             <div class="row form-group">
                                 <div class="col col-md-3">
                                     <label for="text-input" class=" form-control-label">Stuff label/category</label>
                                 </div>
                                 <div class="col-12 col-md-9 autocomplete">
-                                    <input type="text" id="myInput" name="label" placeholder="Input label/category" class="form-control">
+                                    <input type="text" value="<?php echo $barang->row()->nama_label;?>" id="myInput" name="label" placeholder="Input label/category" class="form-control">
                                     <small class="form-text text-muted">e.g. Wallet</small>
                                 </div>
                             </div>
@@ -69,7 +69,7 @@ $this->load->view("back/parts/V_Navigation");
                                     <label for="text-input" class=" form-control-label">Stuff Name</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="text" id="text-input" name="nama" placeholder="Input stuff name" class="form-control">
+                                    <input value="<?php echo $barang->row()->nama_barang;?>" type="text" id="text-input" name="nama" placeholder="Input stuff name" class="form-control">
                                     <small class="form-text text-muted">e.g. Louis Vuitton Wallet</small>
                                 </div>
                             </div>
@@ -78,7 +78,9 @@ $this->load->view("back/parts/V_Navigation");
                                     <label for="textarea-input" class=" form-control-label">Description</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Description..." class="form-control"></textarea>
+                                    <textarea name="textarea-input" id="textarea-input" rows="9" placeholder="Description..." class="form-control">
+                                        <?php echo $barang->row()->deskripsi;?>
+                                    </textarea>
                                 </div>
                             </div>
                             <script src="<?php echo base_url()?>assets/back/CoolAdmin-master/vendor/jquery/dist/jquery.min.js"></script>
@@ -109,13 +111,13 @@ $this->load->view("back/parts/V_Navigation");
                                 </div>
                                 <div class="col-12 col-md-9">
                                     <select name="kota" id="select-kota" class="form-control">
-                                        <option value="0"> - Choose - </option>
+                                        <option value="<?php echo $barang->row()->id_kota;?>"> <?php echo $barang->row()->nama_kota;?> </option>
                                         <?php
                                         foreach ($data_kota as $dk){
                                             ?>
                                             <option
-                                                    value="<?php echo $dk->id_kota;?>"
-                                                    label="<?php echo $dk->nama_kota;?>"
+                                                value="<?php echo $dk->id_kota;?>"
+                                                label="<?php echo $dk->nama_kota;?>"
                                             >
 
                                             </option>
@@ -128,7 +130,7 @@ $this->load->view("back/parts/V_Navigation");
                                 </div>
                                 <div class="col-12 col-md-9">
                                     <select name="univ" id="select-univ" class="form-control">
-                                        <option value="0">Please select city</option>
+                                        <option value="<?php echo $barang->row()->id_univ;?>"><?php echo $barang->row()->nama_univ;?></option>
 
                                     </select>
                                 </div>
@@ -138,7 +140,7 @@ $this->load->view("back/parts/V_Navigation");
                                     <label for="date-input" class=" form-control-label">Date</label>
                                 </div>
                                 <div class="col-12 col-md-9">
-                                    <input type="date" id="date-input" name="date-input" class="form-control">
+                                    <input type="date" value="<?php echo $barang->row()->tanggal_upload;?>" id="date-input" name="date-input" class="form-control">
                                     <small class="help-block form-text">Input Date</small>
                                 </div>
                             </div>
@@ -158,14 +160,14 @@ $this->load->view("back/parts/V_Navigation");
                     </form>
                 </div>
             </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="copyright">
-                    <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="copyright">
+                        <p>Copyright © 2018 Colorlib. All rights reserved. Template by <a href="https://colorlib.com">Colorlib</a>.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
         <script>
             function autocomplete(inp, arr) {
                 /*the autocomplete function takes two arguments,
@@ -271,8 +273,8 @@ $this->load->view("back/parts/V_Navigation");
             /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
             autocomplete(document.getElementById("myInput"), data_label);
         </script>
-    <!-- END PAGE CONTENT-->
-    <?php
-    $this->load->view("back/parts/V_Footer");
-    ?>
+        <!-- END PAGE CONTENT-->
+        <?php
+        $this->load->view("back/parts/V_Footer");
+        ?>
 

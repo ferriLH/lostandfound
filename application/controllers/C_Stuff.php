@@ -19,7 +19,8 @@ class C_Stuff extends CI_Controller
         if ($this->session->userdata('isLogin') == TRUE) {
             $data = array(
                 "title" => "Add Stuffs | Lost and Found",
-                "data_kota" => $this->M_Stuff->get_data_kota()
+                "data_kota" => $this->M_Stuff->get_data_kota(),
+                "data_label" => $this->M_Stuff->get_data_label()
             );
             $this->load->view('back/V_Add_stuffs',$data);
         }else{
@@ -45,40 +46,83 @@ class C_Stuff extends CI_Controller
             $nama   = $this->input->post("nama");
             $desk   = $this->input->post("textarea-input");
             $tgl    = $this->input->post("date-input");
-            if (!empty($_FILES['foto']['name'])) {
-                $_FILES['file']['name']     = $_FILES['foto']['name'];
-                $_FILES['file']['type']     = $_FILES['foto']['type'];
-                $_FILES['file']['tmp_name'] = $_FILES['foto']['tmp_name'];
-                $_FILES['file']['error']    = $_FILES['foto']['error'];
-                $_FILES['file']['size']     = $_FILES['foto']['size'];
-                $uploadPath = 'foto_barang/';
-                // File upload configuration
-                $config['upload_path'] = $uploadPath;
-                $config['allowed_types'] = 'jpg|jpeg|png|gif';
-                // Load and initialize upload library
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
+            $cek    = $this->M_Stuff->cek_label($label);
+            if($cek->num_rows() != 0){
+                $id_l = $cek->row()->id_label;
+                if (!empty($_FILES['foto']['name'])) {
+                    $_FILES['file']['name']     = $_FILES['foto']['name'];
+                    $_FILES['file']['type']     = $_FILES['foto']['type'];
+                    $_FILES['file']['tmp_name'] = $_FILES['foto']['tmp_name'];
+                    $_FILES['file']['error']    = $_FILES['foto']['error'];
+                    $_FILES['file']['size']     = $_FILES['foto']['size'];
+                    $uploadPath = 'foto_barang/';
+                    // File upload configuration
+                    $config['upload_path'] = $uploadPath;
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    // Load and initialize upload library
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
 
-                // Upload file to server
-                if ($this->upload->do_upload('file')) {
-                // Uploaded file data
-                    $fileData = $this->upload->data();
-                    $uploadData['nama_foto'] = $fileData['file_name'];
-                    if(!empty($uploadData)){
-                        $this->M_Stuff->add_barang($kota,$univ,$label,$user,$nama,$uploadData['nama_foto'],$desk,$tgl);
-                        $this->session->set_flashdata('result', '<br>Berhasil.');
-                        redirect('stuffs/add');
+                    // Upload file to server
+                    if ($this->upload->do_upload('file')) {
+                        // Uploaded file data
+                        $fileData = $this->upload->data();
+                        $uploadData['nama_foto'] = $fileData['file_name'];
+                        if(!empty($uploadData)){
+                            $this->M_Stuff->add_barang($kota,$univ,$id_l,$user,$nama,$uploadData['nama_foto'],$desk,$tgl);
+                            $this->session->set_flashdata('result', '<br>Berhasil.');
+                            redirect('stuffs/add');
+                        }else{
+                            $this->session->set_flashdata('result', '<br>Gagal.');
+                            redirect('stuffs/add');
+                        }
                     }else{
-                        $this->session->set_flashdata('result', '<br>Gagal.');
+                        $this->session->set_flashdata('result', '<br>gagal upload foto.');
                         redirect('stuffs/add');
                     }
                 }else{
-                    $this->session->set_flashdata('result', '<br>gagal upload foto.');
+                    $this->session->set_flashdata('result', '<br>pilih foto.');
                     redirect('stuffs/add');
                 }
             }else{
-                $this->session->set_flashdata('result', '<br>pilih foto.');
-                redirect('stuffs/add');
+                $this->M_Stuff->add_label($label);
+                $cek    = $this->M_Stuff->cek_label($label);
+                $id_l   = $cek->row()->id_label;
+                if (!empty($_FILES['foto']['name'])) {
+                    $_FILES['file']['name']     = $_FILES['foto']['name'];
+                    $_FILES['file']['type']     = $_FILES['foto']['type'];
+                    $_FILES['file']['tmp_name'] = $_FILES['foto']['tmp_name'];
+                    $_FILES['file']['error']    = $_FILES['foto']['error'];
+                    $_FILES['file']['size']     = $_FILES['foto']['size'];
+                    $uploadPath = 'foto_barang/';
+                    // File upload configuration
+                    $config['upload_path'] = $uploadPath;
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    // Load and initialize upload library
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+
+                    // Upload file to server
+                    if ($this->upload->do_upload('file')) {
+                        // Uploaded file data
+                        $fileData = $this->upload->data();
+                        $uploadData['nama_foto'] = $fileData['file_name'];
+                        if(!empty($uploadData)){
+                            $this->M_Stuff->add_barang($kota,$univ,$id_l,$user,$nama,$uploadData['nama_foto'],$desk,$tgl);
+                            $this->session->set_flashdata('result', '<br>Berhasil.');
+                            redirect('stuffs/add');
+                        }else{
+                            $this->session->set_flashdata('result', '<br>Gagal.');
+                            redirect('stuffs/add');
+                        }
+                    }else{
+                        $this->session->set_flashdata('result', '<br>gagal upload foto.');
+                        redirect('stuffs/add');
+                    }
+                }else{
+                    $this->session->set_flashdata('result', '<br>pilih foto.');
+                    redirect('stuffs/add');
+                }
             }
         }else{
             redirect('dasboard');
@@ -103,5 +147,112 @@ class C_Stuff extends CI_Controller
         );
         $this->session->set_flashdata("result","<br>successfully delete stuff.");
         redirect('C_Stuff/edit_stuffs/'.$id_u,$data);
+    }
+    public function update_stuffs($id)
+    {
+        if ($this->session->userdata('isLogin') == TRUE) {
+            $data = array(
+                "title" => "Edit Stuffs | Lost and Found",
+                "barang" => $this->M_Stuff->get_data_brg_1($id),
+                "data_kota" => $this->M_Stuff->get_data_kota(),
+                "data_label" => $this->M_Stuff->get_data_label()
+            );
+            $this->load->view('back/V_Update_stuffs',$data);
+        }else{
+            redirect('dasboard');
+        }
+    }
+    public function update_stuffs_auth($id,$user)
+    {
+        if ($this->session->userdata('isLogin') == TRUE) {
+            $kota   = $this->input->post("kota");
+            $univ   = $this->input->post("univ");
+            $label  = $this->input->post("label");
+            $nama   = $this->input->post("nama");
+            $desk   = $this->input->post("textarea-input");
+            $tgl    = $this->input->post("date-input");
+            $cek    = $this->M_Stuff->cek_label($label);
+            if($cek->num_rows() != 0){
+                $id_l = $cek->row()->id_label;
+                if (!empty($_FILES['foto']['name'])) {
+                    $_FILES['file']['name']     = $_FILES['foto']['name'];
+                    $_FILES['file']['type']     = $_FILES['foto']['type'];
+                    $_FILES['file']['tmp_name'] = $_FILES['foto']['tmp_name'];
+                    $_FILES['file']['error']    = $_FILES['foto']['error'];
+                    $_FILES['file']['size']     = $_FILES['foto']['size'];
+                    $uploadPath = 'foto_barang/';
+                    // File upload configuration
+                    $config['upload_path'] = $uploadPath;
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    // Load and initialize upload library
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+
+                    // Upload file to server
+                    if ($this->upload->do_upload('file')) {
+                        // Uploaded file data
+                        $fileData = $this->upload->data();
+                        $uploadData['nama_foto'] = $fileData['file_name'];
+                        if(!empty($uploadData)){
+                            $this->M_Stuff->update_barang_foto($id,$kota,$univ,$id_l,$user,$nama,$uploadData['nama_foto'],$desk,$tgl);
+                            $this->session->set_flashdata('result', '<br>Berhasil.');
+                            redirect('C_Stuff/update_stuffs/'.$id);
+                        }else{
+                            $this->session->set_flashdata('result', '<br>Gagal.');
+                            redirect('C_Stuff/update_stuffs/'.$id);
+                        }
+                    }else{
+                        $this->session->set_flashdata('result', '<br>gagal upload foto.');
+                        redirect('C_Stuff/update_stuffs/'.$id);
+                    }
+                }else{
+                    $this->M_Stuff->update_barang_no_foto($id,$kota,$univ,$id_l,$user,$nama,$desk,$tgl);
+                    $this->session->set_flashdata('result', '<br>Berhasil.');
+                    redirect('C_Stuff/update_stuffs/'.$id);
+                }
+            }else{
+                $this->M_Stuff->add_label($label);
+                $cek    = $this->M_Stuff->cek_label($label);
+                $id_l   = $cek->row()->id_label;
+                if (!empty($_FILES['foto']['name'])) {
+                    $_FILES['file']['name']     = $_FILES['foto']['name'];
+                    $_FILES['file']['type']     = $_FILES['foto']['type'];
+                    $_FILES['file']['tmp_name'] = $_FILES['foto']['tmp_name'];
+                    $_FILES['file']['error']    = $_FILES['foto']['error'];
+                    $_FILES['file']['size']     = $_FILES['foto']['size'];
+                    $uploadPath = 'foto_barang/';
+                    // File upload configuration
+                    $config['upload_path'] = $uploadPath;
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                    // Load and initialize upload library
+                    $this->load->library('upload', $config);
+                    $this->upload->initialize($config);
+
+                    // Upload file to server
+                    if ($this->upload->do_upload('file')) {
+                        // Uploaded file data
+                        $fileData = $this->upload->data();
+                        $uploadData['nama_foto'] = $fileData['file_name'];
+                        if(!empty($uploadData)){
+                            $this->M_Stuff->update_barang_foto($id,$kota,$univ,$id_l,$user,$nama,$uploadData['nama_foto'],$desk,$tgl);
+                            $this->session->set_flashdata('result', '<br>Berhasil.');
+                            redirect('C_Stuff/update_stuffs/'.$id);
+                        }else{
+                            $this->session->set_flashdata('result', '<br>Gagal.');
+                            redirect('C_Stuff/update_stuffs/'.$id);
+                        }
+                    }else{
+                        $this->session->set_flashdata('result', '<br>gagal upload foto.');
+                        redirect('C_Stuff/update_stuffs/'.$id);
+                    }
+                }else{
+                    $this->M_Stuff->update_barang_no_foto($id,$kota,$univ,$id_l,$user,$nama,$desk,$tgl);
+                    $this->session->set_flashdata('result', '<br>Berhasil.');
+                    redirect('C_Stuff/update_stuffs/'.$id);
+                }
+            }
+        }else{
+            redirect('dasboard');
+        }
     }
 }

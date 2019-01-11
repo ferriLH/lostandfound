@@ -2,13 +2,6 @@
 $this->load->view('front/parts/V_Header');
 $this->load->view('front/parts/V_Navigation');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-
-
-
-
     <!-- ***** Breadcumb Area Start ***** -->
     <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(<?php echo base_url('assets/front/img/bg-img/hero-1.jpg') ?>)">
     </div>
@@ -23,8 +16,8 @@ $this->load->view('front/parts/V_Navigation');
                 <p>Hallo, Thanks for using our app, we are very appreciate. we are from Haptic.id developer of Lost And Found think that our app is not perfect. if u have a problem or suggest. just tell us we are very happy to listen whats your opinion. We are Sorry and Thank You !</p>
                 <div class="contact-info d-lg-flex">
                     <div class="single-contact-info">
-                        <h7><i class="fa fa-map-signs" aria-hidden="true"></i>Universitas Komputer Indonesia (UNIKOM)</h7>
-                        <h7><i class="fa fa-map-signs" aria-hidden="true"></i> No. 25-33</h7>
+                        <h6><i class="fa fa-map-signs" aria-hidden="true"></i>Universitas Komputer Indonesia (UNIKOM)</h6>
+                        <h6><i class="fa fa-map-signs" aria-hidden="true"></i> No. 25-33</h6>
                     </div>
                     <div class="single-contact-info">
                         <h6><i class="fa fa-envelope-o" aria-hidden="true"></i>emailhapticproject@gmail.com</h6>
@@ -37,10 +30,20 @@ $this->load->view('front/parts/V_Navigation');
                 <div class="contact-form-title">
                     <h6>What do you think ? write in the form down bellow!</h6>
                 </div>
-                <form action="<?php echo base_url('contactus/sendcomplain')?>" method="post">
+                <?php
+                if (validation_errors() || $this->session->flashdata('result_pesan')) {
+                    ?>
+                    <div class="alert alert-success">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <strong>Success</strong>
+                        <?php echo validation_errors(); ?>
+                        <?php echo $this->session->flashdata('result_pesan'); ?>
+                    </div>
+                <?php } ?>
+                <form action="<?php echo base_url('C_Contactus/message')?>" method="post">
                     <div class="row">
                         <div class="col-12 col-md-6">
-                            <input type="text" name="nama" class="form-control" placeholder="Your Name">
+                            <input type="text" name="name" class="form-control" placeholder="Your Name">
                         </div>
                         <div class="col-12 col-md-6">
                             <input type="email" name="email" class="form-control" placeholder="Email Address">
@@ -49,10 +52,10 @@ $this->load->view('front/parts/V_Navigation');
                             <input type="text" name="subject" class="form-control" placeholder="Subject">
                         </div>
                         <div class="col-12">
-                            <textarea name="isi_pesan" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
+                            <textarea name="message" class="form-control" id="Message" cols="30" rows="10" placeholder="Your Message"></textarea>
                         </div>
                         <div class="col-12">
-                            <button type="submit" class="btn dorne-btn">Send</button>
+                            <input type="submit" class="btn dorne-btn">
                         </div>
                     </div>
                 </form>

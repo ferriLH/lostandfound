@@ -9,7 +9,10 @@ $this->load->view("back/parts/V_Navigation");
     <div class="page-content">
         <div class="row">
             <div class="col-md-12">
-                <div class="box-body no-padding">
+                <div class="card">
+                    <div class="card-header">
+                        <strong>Edit</strong> Stuffs
+                    </div>
                     <?php
                     if (validation_errors() || $this->session->flashdata('result')) {
                         ?>
@@ -20,7 +23,7 @@ $this->load->view("back/parts/V_Navigation");
                             <?php echo $this->session->flashdata('result'); ?>
                         </div>
                     <?php } ?>
-                    <div class="table-responsive mailbox-messages">
+                    <div class="card-body card-block">
                         <table id="barang" class="table table-hover table-striped">
                             <thead>
                             <tr>
@@ -45,7 +48,7 @@ $this->load->view("back/parts/V_Navigation");
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </a>
-                                        <a href="<?php echo base_url('C_Stuff/edit_stuffs/');echo $brg->id_barang;?>">
+                                        <a href="<?php echo base_url('C_Stuff/update_stuffs/');echo $brg->id_barang;?>">
                                             <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Edit">
                                                 <i class="fa fa-edit"></i>
                                             </button>
