@@ -39,10 +39,13 @@ class C_List extends CI_Controller
     }
     function advancedsearch()
     {
-        $label = $this->input->get('label');
+        $data = array(
+            "title" => "Advanced Search | Lost and Found"
+        );
+        $label = $this->input->get('inputlabel');
         $kota  = $this->input->get('nama_kota');
         $univ  = $this->input->get('univ');
-        $search = $this->M_List->get_search($label,$kota,$univ);
+        $search = $this->M_List->get_advanced_search($label,$kota,$univ);
         $data['barang'] = $search;
         $this->load->view('front/V_List',$data);
     }

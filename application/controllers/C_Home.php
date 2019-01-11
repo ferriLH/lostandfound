@@ -18,7 +18,7 @@ class C_Home extends CI_Controller
     {
         $data = array(
             "title" => "Home | Lost and Found",
-            "label" => $this->M_Home->get_label(),
+            "label" => $this->M_Home->get_nama_barang(),
             "kota"  => $this->M_Home->get_kota(),
             "univ"  => $this->M_Home->get_univ(),
         );

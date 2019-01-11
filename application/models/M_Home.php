@@ -35,4 +35,11 @@ class M_Home extends CI_Model
         $this->db->order_by('nama_univ','desc');
         return $this->db->get()->result();
     }
+    function get_nama_barang()
+    {
+        $this->db->select('*');
+        $this->db->from('t_barang');
+        $this->db->order_by('nama_barang','desc');
+        return $this->db->get()->result();
+    }
 }
