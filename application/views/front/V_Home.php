@@ -63,14 +63,14 @@ $this->load->view("front/parts/V_Navigation");
                             <div class="tab-content" id="nav-tabContent">
                             <h6>What are you looking for?</h6>
                             <form action="<?php echo base_url('explore/advancedsearch')?>" method="get">
-                                <input type="text" id="myInput" name="inputlabel" class="form-control autocomplete">&nbsp;&nbsp;&nbsp;
-                                <select class="custom-select" name="nama_kota">
+                                <input type="text" style="width: 35%" id="myInput" name="inputlabel" class="form-control autocomplete">&nbsp;&nbsp;&nbsp;
+                                <select style="width: 30%" class="custom-select" name="nama_kota">
                                     <option selected>Area</option>
                                     <?php foreach ($kota as $k):?>
                                      <option value="<?php echo($k->nama_kota);?>"><?php print_r($k->nama_kota);?></option>
                                      <?php endforeach;?>
                                 </select>
-                                <select class="custom-select" name="univ">
+                                <select style="width: 35%" class="custom-select" name="univ">
                                     <option selected>university</option>
                                     <?php foreach ($univ as $u):?>
                                      <option value="<?php echo($u->nama_univ);?>"><?php print_r($u->nama_univ);?></option>

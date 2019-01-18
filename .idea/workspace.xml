@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="118c4f25-8564-435f-a1bf-f770292f678c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Class Diagram1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Class Diagram1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/M_Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/back/V_Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/back/V_Profile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/front/V_Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/front/V_Home.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,51 +17,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/C_Profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
+            <state relative-caret-position="369">
               <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/M_Profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="590">
-              <caret line="67" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/back/V_Profile.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
-              <folding>
-                <element signature="e#1112#1119#1#HTML" expanded="true" />
-                <element signature="e#1710#1717#1#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/back/V_Add_stuffs.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="55" column="177" selection-start-line="55" selection-start-column="148" selection-end-line="55" selection-end-column="177" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/C_Login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-end-line="36" />
             </state>
           </provider>
         </entry>
@@ -81,6 +47,8 @@
         <option value="$PROJECT_DIR$/application/models/M_Profile.php" />
         <option value="$PROJECT_DIR$/application/views/back/V_Profile.php" />
         <option value="$PROJECT_DIR$/application/controllers/C_Profile.php" />
+        <option value="$PROJECT_DIR$/application/views/front/V_Home.php" />
+        <option value="$PROJECT_DIR$/application/config/routes.php" />
       </list>
     </option>
   </component>
@@ -111,6 +79,12 @@
               <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
               <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -131,6 +105,13 @@
               <item name="application" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="back" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
@@ -174,17 +155,22 @@
       <updated>1547195120034</updated>
       <workItem from="1547195125344" duration="10000" />
       <workItem from="1547212114755" duration="12488000" />
+      <workItem from="1547230115678" duration="65000" />
+      <workItem from="1547470328965" duration="2980000" />
+      <workItem from="1547539995374" duration="598000" />
+      <workItem from="1547698262740" duration="1403000" />
+      <workItem from="1547727567816" duration="1538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12498000" />
+    <option name="totallyTimeSpent" value="19082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17449665" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18791947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -216,24 +202,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/back/V_Add_stuffs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="55" column="177" selection-start-line="55" selection-start-column="148" selection-end-line="55" selection-end-column="177" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/sign/V_Login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="70" column="18" lean-forward="true" selection-start-line="61" selection-start-column="8" selection-end-line="70" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/C_Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="37" lean-forward="true" selection-start-line="35" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -246,25 +218,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_Profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="590">
+        <state relative-caret-position="624">
           <caret line="67" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/back/V_Profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="561">
           <caret line="33" column="58" selection-start-line="33" selection-start-column="58" selection-end-line="33" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/back/V_Add_stuffs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="55" column="177" selection-start-line="55" selection-start-column="148" selection-end-line="55" selection-end-column="177" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/C_Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="37" selection-start-line="35" selection-end-line="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/V_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="66" column="56" selection-start-line="66" selection-start-column="56" selection-end-line="66" selection-end-column="56" />
           <folding>
-            <element signature="e#1112#1119#1#HTML" expanded="true" />
-            <element signature="e#1710#1717#1#HTML" expanded="true" />
+            <element signature="n#style#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#form#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#select#1;n#form#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#section#2;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="59" column="43" selection-start-line="59" selection-start-column="43" selection-end-line="59" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/C_Profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
+        <state relative-caret-position="369">
           <caret line="163" column="40" selection-start-line="163" selection-start-column="40" selection-end-line="163" selection-end-column="40" />
         </state>
       </provider>

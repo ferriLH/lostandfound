@@ -57,6 +57,7 @@ $route['login/auth']            = 'C_Login/auth';
 $route['logout']                = 'C_Login/logout';
 $route['forget_pass']           = 'C_Login/forget';
 $route['login/forget_auth']     = 'C_Login/forget_auth';
+$route['signup']                = 'C_Signup';
 $route['signup/confirm']        = 'C_Signup/confirm';
 $route['explore']               = 'C_List';
 $route['explore/search']        = 'C_List/search';
