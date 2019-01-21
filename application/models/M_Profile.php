@@ -47,9 +47,9 @@ class M_Profile extends CI_Model
         $this->db->where('id_user',$id);
         $this->db->update('t_user',$data);
     }
-    function update_photo($id,$foto){
+    function update_photo($id,$photo){
         $data = array(
-            'file_foto' => $foto);
+            'file_foto' => $photo);
         $this->db->where('id_user',$id);
         $this->db->update('t_user',$data);
     }

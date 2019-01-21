@@ -86,6 +86,12 @@ $foto   = $this->session->userdata('file_foto');
                                             <i class="zmdi zmdi-account"></i>Account</a>
                                     </div>
                                 </div>
+                                <div class="account-dropdown__body">
+                                    <div class="account-dropdown__item">
+                                        <a href="<?php echo base_url('');?>">
+                                            <i class="zmdi zmdi-home"></i>Front Page</a>
+                                    </div>
+                                </div>
                                 <div class="account-dropdown__footer">
                                     <a href="<?php echo base_url('logout');?>">
                                         <i class="zmdi zmdi-power"></i>Logout</a>

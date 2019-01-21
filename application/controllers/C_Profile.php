@@ -167,8 +167,59 @@ class C_Profile extends CI_Controller {
         }else{
             redirect('dashboard');
         }
-
-
     }
+    public function update_photo($id){
+        if ($this->session->userdata('isLogin') == TRUE) {
+            if (!empty($_FILES['foto']['name'])) {
+                $_FILES['file']['name']     = $_FILES['foto']['name'];
+                $_FILES['file']['type']     = $_FILES['foto']['type'];
+                $_FILES['file']['tmp_name'] = $_FILES['foto']['tmp_name'];
+                $_FILES['file']['error']    = $_FILES['foto']['error'];
+                $_FILES['file']['size']     = $_FILES['foto']['size'];
+                $uploadPath = 'foto_user/';
+                // File upload configuration
+                $config['upload_path'] = $uploadPath;
+                $config['allowed_types'] = 'jpg|jpeg|png|gif';
+                // Load and initialize upload library
+                $this->load->library('upload', $config);
+                $this->upload->initialize($config);
 
+                // Upload file to server
+                if ($this->upload->do_upload('file')) {
+                    // Uploaded file data
+                    $fileData = $this->upload->data();
+                    $uploadData['nama_foto'] = $fileData['file_name'];
+                    if(!empty($uploadData)){
+                        $this->M_Profile->update_photo($id,$uploadData['nama_foto']);
+                        $this->session->set_flashdata('success', '<br>Your photo has been changed!');
+                        $get = $this->M_Profile->get_account($id);
+                        foreach ($get->result() as $dat){
+                            $sess_data['isLogin']       = TRUE;
+                            $sess_data['id_user']       = $dat->id_user;
+                            $sess_data['nik']           = $dat->nik;
+                            $sess_data['nama']          = $dat->nama;
+                            $sess_data['email']         = $dat->email;
+                            $sess_data['password']      = $dat->password;
+                            $sess_data['alamat']        = $dat->alamat;
+                            $sess_data['status']        = $dat->status;
+                            $sess_data['file_foto']     = $dat->file_foto;
+                            $this->session->set_userdata($sess_data);
+                        }
+                        redirect('profile');
+                    }else{
+                        $this->session->set_flashdata('failed', '<br>Failed');
+                        redirect('profile');
+                    }
+                }else{
+                    $this->session->set_flashdata('failed', '<br>Failed Upload Photo.');
+                    redirect('profile');
+                }
+            }else{
+                $this->session->set_flashdata('failed', '<br>Select Photo.');
+                redirect('profile');
+            }
+        }else{
+            redirect('dashboard');
+        }
+    }
 }
