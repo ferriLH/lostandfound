@@ -23,7 +23,7 @@ $this->load->view("back/parts/V_Navigation");
                             <?php echo $this->session->flashdata('result'); ?>
                         </div>
                     <?php } ?>
-                    <div class="card-body card-block">
+                    <div class="card-body card-block table-responsive">
                         <table id="barang" class="table table-hover table-striped">
                             <thead>
                             <tr>

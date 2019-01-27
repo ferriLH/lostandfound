@@ -55,28 +55,28 @@ $this->load->view("front/parts/V_Navigation");
                         <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                             <h6>What are you looking for?</h6>
                             <form action="<?php echo base_url('explore/search')?>" method="get">
-                                <input size=70%" type="text" name="keyword">
+                                <input style="width: 100%;" class="form-control" type="text" placeholder="Type your stuff here" name="keyword">
                                 <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
                             </form>
                         </div>
                         <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
-                            <div class="tab-content" id="nav-tabContent">
+                            <div style="position: relative;" class="tab-content" id="nav-tabContent">
                             <h6>What are you looking for?</h6>
                             <form action="<?php echo base_url('explore/advancedsearch')?>" method="get">
-                                <input type="text" style="width: 35%" id="myInput" name="inputlabel" class="form-control autocomplete">&nbsp;&nbsp;&nbsp;
-                                <select style="width: 30%" class="custom-select" name="nama_kota">
+                                <input style="width: 100%;" placeholder="Label" type="text" id="myInput" name="inputlabel" class="form-control autocomplete">&nbsp;&nbsp;&nbsp;
+                                <select style="width: 100%;" class="custom-select" name="nama_kota">
                                     <option selected>Area</option>
                                     <?php foreach ($kota as $k):?>
                                      <option value="<?php echo($k->nama_kota);?>"><?php print_r($k->nama_kota);?></option>
                                      <?php endforeach;?>
                                 </select>
-                                <select style="width: 35%" class="custom-select" name="univ">
+                                <select style="width: 100%;" class="custom-select" name="univ">
                                     <option selected>university</option>
                                     <?php foreach ($univ as $u):?>
                                      <option value="<?php echo($u->nama_univ);?>"><?php print_r($u->nama_univ);?></option>
                                      <?php endforeach;?>
                                 </select>
-                                <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i></button>
+                                <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
                             </form>
                         </div>
                     </div>
@@ -94,8 +94,9 @@ $this->load->view("front/parts/V_Navigation");
     </div>
 </section>
 <!-- ***** Welcome Area End ***** -->
-
-
+<br>
+<br>
+<br>
 <!-- ***** About Area Start ***** -->
 <section class="dorne-about-area section-padding-0-100">
     <div class="container">
@@ -459,21 +460,21 @@ $this->load->view("front/parts/V_Navigation");
 <!-- ***** Features Events Area End ***** -->
 
 <!-- ***** Clients Area Start ***** -->
-<div class="dorne-clients-area section-padding-100">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12">
-                <div class="clients-logo d-md-flex align-items-center justify-content-around">
-                    <img src="<?php echo base_url('assets/front/img/clients-img/5.png')?>" alt="">
-                    <img src="<?php echo base_url('assets/front/img/clients-img/5.png')?>" alt="">
-                    <img src="<?php echo base_url('assets/front/img/clients-img/5.png')?>" alt="">
-                    <img src="<?php echo base_url('assets/front/img/clients-img/5.png')?>" alt="">
-                    <img src="<?php echo base_url('assets/front/img/clients-img/5.png')?>" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="dorne-clients-area section-padding-100">-->
+<!--    <div class="container-fluid">-->
+<!--        <div class="row">-->
+<!--            <div class="col-12">-->
+<!--                <div class="clients-logo d-md-flex align-items-center justify-content-around">-->
+<!--                    <img src="--><?php //echo base_url('assets/front/img/clients-img/5.png')?><!--" alt="">-->
+<!--                    <img src="--><?php //echo base_url('assets/front/img/clients-img/5.png')?><!--" alt="">-->
+<!--                    <img src="--><?php //echo base_url('assets/front/img/clients-img/5.png')?><!--" alt="">-->
+<!--                    <img src="--><?php //echo base_url('assets/front/img/clients-img/5.png')?><!--" alt="">-->
+<!--                    <img src="--><?php //echo base_url('assets/front/img/clients-img/5.png')?><!--" alt="">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 <!-- ***** Clients Area End ***** -->
 <!--Script auto complete-->
 <script>

@@ -16,7 +16,7 @@ class C_Login extends CI_Controller {
     public function index()
     {
         if ($this->session->userdata('isLogin') == TRUE) {
-            redirect('dashboard');
+            redirect('dashboard/'.$this->session->userdata('id_user'));
         }else{
             $data = array(
                 "title" => "Login | Lost and Found"
@@ -47,7 +47,7 @@ class C_Login extends CI_Controller {
                     $sess_data['file_foto']     = $dat->file_foto;
                     $this->session->set_userdata($sess_data);
                 }
-                redirect('dashboard');
+                redirect('dashboard/'.$this->session->userdata('id_user'));
             }else {
                 $this->session->set_flashdata('failed', '<br>Username atau Password yang anda masukkan salah!');
                 redirect('login');

@@ -15,7 +15,8 @@ $foto   = $this->session->userdata('file_foto');
         <div class="container">
             <div class="header4-wrap">
                 <div class="header__logo">
-                    <a href="<?php echo base_url('dashboard');?>">
+                    <a href="<?php echo base_url('dashboard/'.$this->session->userdata('id_user'));
+                    ?>">
                         <img src="<?php echo base_url();?>/assets/front/img/core-img/lf.png" alt="CoolAdmin" />
                     </a>
                 </div>
@@ -153,7 +154,7 @@ $foto   = $this->session->userdata('file_foto');
                             <nav class="navbar-sidebar2 navbar-sidebar3">
                                 <ul class="list-unstyled navbar__list">
                                     <li class="<?php if($this->uri->segment(1)=='dashboard'){echo 'active';}?> has-sub">
-                                        <a class="js-arrow" href="<?php echo base_url('dashboard')?>">
+                                        <a class="js-arrow" href="<?php echo base_url('dashboard/').$this->session->userdata('id_user')?>">
                                             <i class="fas fa-tachometer-alt"></i>Dashboard
                                         </a>
                                     </li>
@@ -163,9 +164,9 @@ $foto   = $this->session->userdata('file_foto');
                                         </a>
                                     </li>
                                     <li class="<?php if($this->uri->segment(1)=='inbox'){echo 'active';}?> has-sub">
-                                        <a href="<?php echo base_url();?>/assets/back/CoolAdmin-master/inbox.html">
+                                        <a href="<?php echo base_url('inbox');?>">
                                             <i class="fas fa-chart-bar"></i>Inbox</a>
-                                        <span class="inbox-num">3</span>
+                                        <span class="inbox-num">0</span>
                                     </li>
                                     <li class="<?php if($this->uri->segment(1)=='stuffs' || $this->uri->segment(1)=='C_Stuff'){echo 'active';}?> has-sub">
                                         <a class="js-arrow" href="#">

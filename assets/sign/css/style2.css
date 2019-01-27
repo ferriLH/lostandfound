@@ -186,28 +186,28 @@ input:hover:-ms-input-placeholder {
 color: #ac7339 !important;  
 }
 input.register {
-    width: 335px;
-    margin: 60px auto;
-    display: block;
-    height: 50px;
-    text-align: center;
-    font-size: 17px;
-    font-weight: normal;
-    color: #fff;
-    background-color:#b32d00;
-    border-color: transparent;
-	font-family: 'Raleway', sans-serif;
-	/*-- w3ls --*/
-	transition:all 0.5s ease-in-out;
-	-webkit-transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-ms-transition:all 0.5s ease-in-out;
-	cursor:pointer;
-}
+	 width: 335px;
+	 margin: 60px auto;
+	 display: block;
+	 height: 50px;
+	 text-align: center;
+	 font-size: 17px;
+	 font-weight: normal;
+	 color: #fff;
+	 background-color:#b32d00;
+	 border-color: transparent;
+	 font-family: 'Raleway', sans-serif;
+	 /*-- w3ls --*/
+	 transition:all 0.5s ease-in-out;
+	 -webkit-transition:all 0.5s ease-in-out;
+	 -moz-transition:all 0.5s ease-in-out;
+	 -o-transition:all 0.5s ease-in-out;
+	 -ms-transition:all 0.5s ease-in-out;
+	 cursor:pointer;
+ }
 input.register:hover {
 	color: #fff;
-    background-color:#3970b0;
+	background-color:#3970b0;
 }
 p.wthree {
     font-size: 16px;

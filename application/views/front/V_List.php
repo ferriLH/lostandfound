@@ -24,7 +24,19 @@ $this->load->view("front/parts/V_Navigation");
                 <?php foreach($barang as $b) {?>
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-features-area mb-50">
-                        <img src="<?php echo base_url('foto_barang/');echo $b->foto_barang;?>" alt="">
+                        <a target="_blank" href="<?php echo base_url('foto_barang/');echo $b->foto_barang;?>">
+                            <img
+                                    style="
+                                min-height: 200px;
+                                max-height: 200px;
+                                display: block;
+                                margin-left: auto;
+                                margin-right: auto;
+                                "
+                                    src="<?php echo base_url('foto_barang/');echo $b->foto_barang;?>"
+                                    alt="Stuff Image">
+                        </a>
+
                         <!-- Label -->
                         <div class="price-start">
                             <p><?php echo $b->nama_label;?></p>

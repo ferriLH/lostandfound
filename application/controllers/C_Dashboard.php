@@ -12,12 +12,14 @@ class C_Dashboard extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('M_Dashboard');
+        $this->load->model('M_Stuff');
     }
-    public function index()
+    public function index($id)
     {
         if ($this->session->userdata('isLogin') == TRUE) {
             $data = array(
                 "title" => "Dashboard | Lost and Found",
+                "barang" => $this->M_Stuff->get_data_brg($id)
             );
             $this->load->view('back/V_Dashboard',$data);
         }else{

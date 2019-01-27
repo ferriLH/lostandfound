@@ -34,6 +34,65 @@
             line-height: 1.4;
             color: #999;
         }
+        a.txt2 {
+            font-family: ;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #999;
+            margin: 0px;
+            transition: all 0.4s;
+            -webkit-transition: all 0.4s;
+            -o-transition: all 0.4s;
+            -moz-transition: all 0.4s;
+        }
+
+        a.txt2:focus {
+            outline: none !important;
+        }
+
+        a.txt2:hover {
+            text-decoration: none;
+            color: #fff
+        }
+        .txt2 {
+            padding-left: 20px ;
+            float: left;
+            font-size: 13px;
+            line-height: 1.4;
+            color: #999;
+        }
+        div.relative {
+            position: relative;
+            width: 100%;
+            top: 100%;
+        }
+        button.register {
+            position: relative;
+            top: -50px;
+            width: 335px;
+            margin: 60px auto;
+            display: block;
+            height: 50px;
+            text-align: center;
+            font-size: 17px;
+            font-weight: normal;
+            color: #fff;
+            background-color:#b32d00;
+            border-color: transparent;
+            font-family: 'Raleway', sans-serif;
+            /*-- w3ls --*/
+            transition:all 0.5s ease-in-out;
+            -webkit-transition:all 0.5s ease-in-out;
+            -moz-transition:all 0.5s ease-in-out;
+            -o-transition:all 0.5s ease-in-out;
+            -ms-transition:all 0.5s ease-in-out;
+            cursor:pointer;
+        }
+        button.register:hover {
+            text-decoration: none;
+            color: #fff;
+            background-color:#3970b0;
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -79,29 +138,37 @@
                 <?php echo $this->session->flashdata('success'); ?>
             </div>
         <?php } ?>
-        <form action="<?php echo base_url('login/auth')?>" method="post">
-            <div class="w3layouts">
-                <input type="text" id="firstname" name="username" placeholder="Username or email" title="Please enter your username or email" required="">
-            </div>
-            <div class="agileinfo">
-                <input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
-            </div>
-            <input type="submit" class="register" value="Login">
+        <div style="position: relative; text-align: center;padding: 50px 0">
+            <form action="<?php echo base_url('login/auth')?>" method="post">
+                <div class="w3layouts">
+                    <input type="text" id="firstname" name="username" placeholder="Username or email" title="Please enter your username or email" required="">
+                </div>
+                <div class="agileinfo">
+                    <input type="password" class="lock" name="password" placeholder="Password" id="password1" required="">
+                </div>
+                <input type="submit" class="register" value="Login">
+            </form>
+            <a href="<?php echo base_url('signup');?>"><button class="register">Register</button></a>
+        </div>
+        <div class="relative">
+            <a class="txt2" href="<?php echo base_url('')?>">
+                <i class="fa fa-caret-left" data-toggle="tooltip" title="Back"></i> Back
+            </a>
+            <a class="txt1" href="<?php echo base_url('forget_pass');?>">Forget Password</a>
+        </div>
 
-        </form>
-        <ul class="social-agileinfo wthree2">
-
-            <li><a href="<?php echo base_url('')?>"><i class="fa fa-caret-left" data-toggle="tooltip" title="Back"></i></a></li>
-            <li><a href="<?php echo base_url('signup')?>"><i class="fa fa-caret-right" data-toggle="tooltip" title="Sign Up"></i></a></li>
-        </ul>
-        <br>
-        <p class="wthree w3l">Signup With Your Favourite Social Profile</p>
-        <ul class="social-agileinfo wthree2">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-        </ul>
-        <a class="txt1" href="<?php echo base_url('forget_pass');?>">Forget Password</a>
+<!--        <ul class="social-agileinfo wthree2">-->
+<!--            <li>-->
+<!--                <a href="--><?php //echo base_url('')?><!--">-->
+<!--                    <i class="fa fa-caret-left" data-toggle="tooltip" title="Back"></i>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <a href="--><?php //echo base_url('signup')?><!--">-->
+<!--                    <i class="fa fa-user-plus" data-toggle="tooltip" title="Sign Up"></i>-->
+<!--                </a>-->
+<!--            </li>-->
+<!--        </ul>-->
     </div>
     <div class="clear">
 

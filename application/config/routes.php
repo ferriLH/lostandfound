@@ -51,7 +51,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['default_controller']    = 'C_Home';
 $route['home']                  = 'C_Home';
-$route['dashboard']             = 'C_Dashboard';
+$route['dashboard']             = 'C_Dashboard/index/$1';
+$route['dashboard/(:any)']      = 'C_Dashboard/index/$1';
 $route['login']                 = 'C_Login';
 $route['login/auth']            = 'C_Login/auth';
 $route['logout']                = 'C_Login/logout';
@@ -64,6 +65,7 @@ $route['explore/search']        = 'C_List/search';
 $route['explore/advancedsearch']= 'C_List/advancedsearch';
 $route['contact']               = 'C_Contactus';
 $route['profile']               = 'C_Profile';
+$route['inbox']                 = 'C_Inbox';
 $route['stuffs/add']            = 'C_Stuff/add_stuffs';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
