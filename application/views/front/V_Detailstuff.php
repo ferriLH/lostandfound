@@ -16,7 +16,7 @@
                 <div class="modal-content">
                     <!--Header-->
                     <div class="modal-header">
-                        <p class="heading lead">Send Messege
+                        <p class="heading lead">Send Message
                         </p>
 
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -29,7 +29,7 @@
                         <div class="text-center">
                             <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
                             <p>
-                                <strong>Send Messege to founder here !</strong>
+                                <strong>Send Message to founder here !</strong>
                             </p>
                         </div>
                         <hr>
@@ -79,12 +79,16 @@
                                 <strong>You must login first before sending message!</strong>
                             </p>
                         </div>
-                        <hr>
                         <center>
                         <a href="<?php echo base_url('login')?>" type="button" class="btn btn-primary waves-effect waves-light">Click Here
                             <i class="fa fa-sign-in ml-1"></i>
                         </a>
                         </center>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="white-text">×</span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -99,11 +103,45 @@
     <br>
     <br>
     <br>
+<?php foreach ($barang as $b ) {?>
+    <!-- Modal: modalPoll -->
+    <div class="modal fade right" id="modalImage" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-full-height modal-right modal-notify modal-info" role="document">
+            <div class="modal-content">
+                <!--Header-->
+                <div class="modal-header">
+                    <p class="heading lead">Image
+                    </p>
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">×</span>
+                    </button>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+                    <div class="text-center">
+                        <i class="far fa-file-alt fa-4x mb-3 animated rotateIn"></i>
+                        <p>
+                            <img src="<?php echo base_url('foto_barang/');echo $b->foto_barang;?>" alt="">
+                        </p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">×</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal: modalPoll -->
+
     <section class="dorne-single-listing-area section-padding-100">
         <div class="container">
             <div class="row justify-content-center">
                 <!-- Single Listing Content -->
-                <?php foreach ($barang as $b ) {?>
                 <div class="col-12 col-lg-8">
                     <div class="single-listing-content">
                             
@@ -130,24 +168,34 @@
 
                         <!-- Listing Verify -->
                         <div class="listing-verify">
-                            <a href="#" class="btn dorne-btn w-100"><i class="fa fa-check pr-3"></i> Claim This Stuff</a>
+<!--                            <a href="#" class="btn dorne-btn w-100"><i class="fa fa-check pr-3"></i> Claim This Stuff</a>-->
                             <button type="button" class="btn dorne-btn w-100" data-toggle="modal" data-target="#modalPoll-1">Send Messege</button>
                         </div>
 
                         <!-- FOTO BARANG -->
                         <div class="book-a-table-widget mt-50">
                             <div class="col-6">
-                                <img src="<?php echo base_url('foto_barang/');echo $b->foto_barang;?>" alt="">
+                                <a data-toggle="modal" data-target="#modalImage">
+                                    <img src="<?php echo base_url('foto_barang/');echo $b->foto_barang;?>" alt="">
+                                </a>
                             </div>
                         </div>
 
                         
                         <!-- Author Widget -->
                         <div class="author-widget mt-50 d-flex align-items-center">
-                            <img src="<?php echo base_url()?>assets/front/img/clients-img/1.jpg" alt="">
+                            <img src="<?php echo base_url('foto_user/');echo $b->file_foto?>" alt="">
                             <div class="authors-name">
                                 <a href="#"><?php echo $b->nama;?></a>
-                                <p>Sang Penemu</p>
+                                <p>
+                                <?php
+                                    if ($this->session->userdata('isLogin') == TRUE) {
+                                        echo "<a href='mailto:$b->email'>".$b->email."</a>";
+                                    }else{
+                                        echo "Login to get email the person who found the item";
+                                    }
+                                ?>
+                                </p>
                             </div>
                         </div>
 

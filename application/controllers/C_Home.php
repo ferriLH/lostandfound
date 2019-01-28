@@ -21,6 +21,8 @@ class C_Home extends CI_Controller
             "label" => $this->M_Home->get_nama_barang(),
             "kota"  => $this->M_Home->get_kota(),
             "univ"  => $this->M_Home->get_univ(),
+            "label" => $this->M_Home->get_most_label(),
+            "new_brg" => $this->M_Home->get_most_barang(),
         );
         $this->load->view('front/V_Home',$data);
     }

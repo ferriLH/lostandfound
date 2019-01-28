@@ -27,6 +27,16 @@ class C_List extends CI_Controller
         $data['barang'] = $city;
         $this->load->view('front/V_List',$data);
     }
+    function by_label()
+    {
+        $data = array(
+            "title" => "Explore By Label | Lost and Found"
+        );
+        $ik = $this->uri->segment(3);
+        $label = $this->M_List->get_by_label($ik);
+        $data['barang'] = $label;
+        $this->load->view('front/V_List',$data);
+    }
     function search()
     {
         $data = array(

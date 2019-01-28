@@ -39,7 +39,7 @@ $id = $this->session->userdata('id_user');
                             </div>
                         <?php } ?>
 
-                        <div id="userphoto"><img width="150px" src="<?php echo base_url();?>/foto_user/<?php echo $this->session->userdata('file_foto');?>" alt="<?php echo $this->session->userdata('nama');?>"></div>
+                        <div id="userphoto"><img style="max-width: 150px" src="<?php echo base_url();?>/foto_user/<?php echo $this->session->userdata('file_foto');?>" alt="<?php echo $this->session->userdata('nama');?>"></div>
                         <h1>Minimal User Profile Layout</h1>
                         <nav id="profiletabs">
                             <ul class="clearfix">

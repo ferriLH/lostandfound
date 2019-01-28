@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 11 Jan 2019 pada 09.18
+-- Generation Time: 28 Jan 2019 pada 13.40
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -50,7 +50,8 @@ INSERT INTO `t_barang` (`id_barang`, `id_kota`, `id_univ`, `id_label`, `id_user`
 (9, 1, 3, 1, 8, ' Louis Vuitton Wallet', 'vertikal_logo_1.png', 'qwertdcx', 1, '2019-01-11'),
 (11, 1, 3, 2, 8, 'STNK Motor', 'about.jpg', 'STNK Motor honda beat F 6969 BF', 1, '2019-01-11'),
 (12, 1, 1, 2, 8, 'STNK Mobil', 'grup.jpg', 'STNK Mobil toyota hiace', 1, '2019-01-11'),
-(13, 1, 2, 2, 8, 'STNK PESAWAT', 'perhubungan.png', 'JAJAJAJAJAJAJAJAJA                                    ', 1, '2019-01-17');
+(13, 1, 2, 2, 8, 'STNK PESAWAT', 'perhubungan.png', 'JAJAJAJAJAJAJAJAJA                                    ', 1, '2019-01-17'),
+(14, 1, 3, 1, 9, 'Louis Vuitton Wallet', 'lv.jpg', 'Original\r\nLouis Vuitton Wallet\r\nColor brown                                    ', 1, '2019-01-18');
 
 -- --------------------------------------------------------
 
@@ -68,7 +69,12 @@ CREATE TABLE `t_kota` (
 --
 
 INSERT INTO `t_kota` (`id_kota`, `nama_kota`) VALUES
-(1, 'Bandung Kota');
+(1, 'Bandung Kota'),
+(2, 'Bandung Barat'),
+(3, 'Bandung Timur'),
+(4, 'Kota Cimahi'),
+(5, 'Bandung Selatan'),
+(6, 'Cimahi Selatan & Utara');
 
 -- --------------------------------------------------------
 
@@ -112,7 +118,10 @@ CREATE TABLE `t_pesan` (
 --
 
 INSERT INTO `t_pesan` (`id_pesan`, `nama`, `email`, `subjek`, `pesan`, `status`, `hapus`, `waktu`, `waktu_delete`) VALUES
-(37, 'lostandfound', 'red.army@my.gavilan.edu', 'asasasa', 'asasasasas', 0, 0, '2019-01-10 17:14:49', '0000-00-00 00:00:00');
+(37, 'lostandfound', 'red.army@my.gavilan.edu', 'asasasa', 'asasasasas', 0, 0, '2019-01-10 17:14:49', '0000-00-00 00:00:00'),
+(38, 'Fobe', 'red.army@my.gavilan.edu', 'test', 'sdadasd', 0, 0, '2019-01-18 00:22:27', '0000-00-00 00:00:00'),
+(39, 'Fobe', 'red.army@my.gavilan.edu', 'test', 'sdadasd', 0, 0, '2019-01-18 00:38:10', '0000-00-00 00:00:00'),
+(40, 'Fobe', 'red.army@my.gavilan.edu', 'test', 'sdadasd', 0, 0, '2019-01-18 00:39:22', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -158,7 +167,8 @@ CREATE TABLE `t_user` (
 --
 
 INSERT INTO `t_user` (`id_user`, `nik`, `nama`, `email`, `password`, `alamat`, `file_foto`, `file_ktp`, `status`) VALUES
-(8, 'utut', 'utut', 'ututardia@gmail.com', 'a00ef087ab5a5987ade38555f3a341f90f7ee3a7', 'Bandung', 'feature-1.jpg', NULL, 1);
+(8, 'utut', 'utut', 'ututardia@gmail.com', 'a00ef087ab5a5987ade38555f3a341f90f7ee3a7', 'Bandung', 'feature-1.jpg', NULL, 1),
+(9, '10116254', 'Ferri L Halim', 'ferrilasmihalim@email.unikom.ac.id', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Cipedes Bandung', 'IMG-20171218-WA0007.png', NULL, 1);
 
 --
 -- Indexes for dumped tables
@@ -213,7 +223,7 @@ ALTER TABLE `t_user`
 -- AUTO_INCREMENT for table `t_barang`
 --
 ALTER TABLE `t_barang`
-  MODIFY `id_barang` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_barang` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `t_label`
@@ -225,7 +235,7 @@ ALTER TABLE `t_label`
 -- AUTO_INCREMENT for table `t_pesan`
 --
 ALTER TABLE `t_pesan`
-  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_pesan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT for table `t_univ`
@@ -237,7 +247,7 @@ ALTER TABLE `t_univ`
 -- AUTO_INCREMENT for table `t_user`
 --
 ALTER TABLE `t_user`
-  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

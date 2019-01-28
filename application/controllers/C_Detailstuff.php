@@ -27,4 +27,3 @@ class C_Detailstuff extends CI_Controller
 		$this->load->view('front/V_Detailstuff',$data);
 	}
 }
-?>

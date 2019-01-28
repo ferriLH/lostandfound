@@ -24,7 +24,7 @@ $this->load->view("front/parts/V_Navigation");
                 <?php foreach($barang as $b) {?>
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-features-area mb-50">
-                        <a target="_blank" href="<?php echo base_url('foto_barang/');echo $b->foto_barang;?>">
+                        <a href="<?php echo base_url('C_Detailstuff/index/'.$b->id_barang);?>">
                             <img
                                     style="
                                 min-height: 200px;

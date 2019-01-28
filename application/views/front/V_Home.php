@@ -128,7 +128,7 @@ $this->load->view("front/parts/V_Navigation");
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.2s">
-                    <img src="<?php echo base_url('assets/front/img/bg-img/editor-1.jpg')?>" alt="">
+                    <img style="min-height: 620px;max-height: 620px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bankot.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
                             <a href="<?php echo base_url('C_List/byCity/1')?>">Midtown of Bandung</a>
@@ -142,7 +142,7 @@ $this->load->view("front/parts/V_Navigation");
             </div>
             <div class="col-12 col-lg-6">
                 <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
-                    <img src="<?php echo base_url('assets/front/img/bg-img/editor-2.jpg')?>" alt="">
+                    <img style="max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/banbar.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
                             <a href="<?php echo base_url('C_List/byCity/2')?>">West Bandung</a>
@@ -154,7 +154,7 @@ $this->load->view("front/parts/V_Navigation");
                     </div>
                 </div>
                 <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
-                    <img src="<?php echo base_url('assets/front/img/bg-img/editor-3.jpg')?>" alt="">
+                    <img style="min-height: 300px;max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bantim.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
                             <a href="<?php echo base_url('C_List/byCity/3')?>">East Bandung</a>
@@ -170,7 +170,7 @@ $this->load->view("front/parts/V_Navigation");
             <div class="row">
                 <div class="col-12 col-lg-6">
                     <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.2s">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/editor-1.jpg')?>" alt="">
+                        <img style="min-height: 620px;max-height: 620px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/cimahi1.jpg')?>" alt="">
                         <div class="editors-pick-info">
                             <div class="places-total-destinations d-flex">
                                 <a href="<?php echo base_url('C_List/byCity/4')?>">Midtown of Cimahi</a>
@@ -184,7 +184,7 @@ $this->load->view("front/parts/V_Navigation");
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/editor-2.jpg')?>" alt="">
+                        <img style="min-height: 300px;max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bansel.jpg')?>" alt="">
                         <div class="editors-pick-info">
                             <div class="places-total-destinations d-flex">
                                 <a href="<?php echo base_url('C_List/byCity/5')?>">South Bandung</a>
@@ -196,7 +196,7 @@ $this->load->view("front/parts/V_Navigation");
                         </div>
                     </div>
                     <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/editor-3.jpg')?>" alt="">
+                        <img style="min-height: 300px;max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/cimsel.jpg')?>" alt="">
                         <div class="editors-pick-info">
                             <div class="places-total-destinations d-flex">
                                 <a href="<?php echo base_url('C_List/byCity/6')?>">North and South Cimahi </a>
@@ -221,7 +221,7 @@ $this->load->view("front/parts/V_Navigation");
                 <div class="section-heading text-center">
                     <span></span>
                     <h4>MOST OF LOSSING STUFF</h4>
-                    <p>Flash Dashboard</p>
+                    <p>Flash Label Stuffs</p>
                 </div>
             </div>
         </div>
@@ -230,95 +230,49 @@ $this->load->view("front/parts/V_Navigation");
             <div class="col-12">
                 <div class="features-slides owl-carousel">
                     <!-- Single Features Area -->
+                    <?php
+                    foreach ($label as $l){
+                    ?>
                     <div class="single-features-area">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/feature-6.jpg')?>" alt="">
+                        <?php
+                        if ($l->nama_label == "STNK") {
+                        ?>
+                            <img src="<?php echo base_url('assets/front/img/bg-img/feature-7.jpg')?>" alt="">
+                            <?php
+                        }else if ($l->nama_label == "dompet"){
+                        ?>
+                            <img src="<?php echo base_url('assets/front/img/bg-img/feature-6.jpg')?>" alt="">
+                            <?php
+                        }else if ($l->nama_label == "SIM"){
+                            ?>
+                            <img src="<?php echo base_url('assets/front/img/bg-img/feature-8.jpg')?>" alt="">
+                            <?php
+                        }else if ($l->nama_label == "hp" || $l->nama_label == "handphone"){
+                            ?>
+                            <img src="<?php echo base_url('assets/front/img/bg-img/feature-10.jpg')?>" alt="">
+                            <?php
+                        }else{
+                            ?>
+                            <img src="<?php echo base_url('assets/front/img/bg-img/feature-9.jpg')?>" alt="">
+                            <?php
+                        }
+                        ?>
+
                         <!-- Rating & Map Area -->
                         <div class="ratings-map-area d-flex">
                             <a href="#"></a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
+                            <a href="<?php echo base_url('C_List/by_label/');echo $l->id_label?>"><img src="<?php echo base_url('assets/front/img/core-img/logo.png')?>" alt=""></a>
                         </div>
                         <div class="feature-content d-flex align-items-center justify-content-between">
                             <div class="feature-title">
-                                <h5>Wallet & Card</h5>
-                                <p>Campus</p>
-                            </div>
-                            <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                                <a href="<?php echo base_url('C_List/by_label/');echo $l->id_label?>"><h5><?php  echo $l->nama_label;?></h5></a>
+                                <p><?php  echo $l->jumlah;?></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Single Features Area -->
-                    <div class="single-features-area">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/feature-7.jpg')?>" alt="">
-                        <!-- Rating & Map Area -->
-                        <div class="ratings-map-area d-flex">
-                            <a href="#"></a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                        <div class="feature-content d-flex align-items-center justify-content-between">
-                            <div class="feature-title">
-                                <h5>Vehicle Registration </h5>
-                                <p>-</p>
-                            </div>
-                            <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Features Area -->
-                    <div class="single-features-area">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/feature-8.jpg')?>" alt="">
-                        <!-- Rating & Map Area -->
-                        <div class="ratings-map-area d-flex">
-                            <a href="#"></a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                        <div class="feature-content d-flex align-items-center justify-content-between">
-                            <div class="feature-title">
-                                <h5>Driving License</h5>
-                                <p>-</p>
-                            </div>
-                            <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Features Area -->
-                    <div class="single-features-area">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/feature-9.jpg')?>" alt="">
-                        <!-- Rating & Map Area -->
-                        <div class="ratings-map-area d-flex">
-                            <a href="#"></a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                        <div class="feature-content d-flex align-items-center justify-content-between">
-                            <div class="feature-title">
-                                <h5>Vehicle Key . Certificate</h5>
-                                <p>-</p>
-                            </div>
-                            <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Single Features Area -->
-                    <div class="single-features-area">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/feature-10.jpg')?>" alt="">
-                        <!-- Rating & Map Area -->
-                        <div class="ratings-map-area d-flex">
-                            <a href="#"></a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                        <div class="feature-content d-flex align-items-center justify-content-between">
-                            <div class="feature-title">
-                                <h5>Mobile Phone</h5>
-                                <p>-</p>
-                            </div>
-                            <div class="feature-favourite">
-                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -338,122 +292,32 @@ $this->load->view("front/parts/V_Navigation");
                 </div>
             </div>
         </div>
-
         <div class="row">
+            <?php
+            foreach ($new_brg as $nb){
+            ?>
             <div class="col-12 col-lg-6">
                 <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
                     <div class="feature-events-thumb">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/event-1.jpg')?>" alt="">
+                        <img style="max-height: 100px" src="<?php echo base_url('foto_barang/');echo $nb->foto_barang;?>" alt="">
                         <div class="date-map-area d-flex">
-                            <a href="#">4 Dec 2018</a>
-                            <a href="https://goo.gl/maps/Emmr3NnA6bP2"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
+                            <a href="<?php echo base_url('C_Detailstuff/index/'.$nb->id_barang);?>"><?php  echo $nb->tanggal_upload;?></a>
+                            <a href="<?php echo base_url('C_Detailstuff/index/'.$nb->id_barang);?>"><img src="<?php echo base_url('assets/front/img/core-img/logo.png')?>" alt=""></a>
                         </div>
                     </div>
                     <div class="feature-events-content">
-                        <h5>Dompet Cokelat</h5>
-                        <h6>Kampus Unjani</h6>
-                        <p>Ditemukan Sebuah dompet berwarna cokelat di dekat kampus unjani sebelah fotokopi</p>
+                        <h5><?php  echo $nb->nama_barang;?></h5>
+                        <h6><?php  echo $nb->nama_univ;?></h6>
+                        <p><?php  echo mb_strimwidth($nb->deskripsi, 0, 20, "...");?></p>
                     </div>
                     <div class="feature-events-details-btn">
-                        <a href="">+</a>
+                        <a href="<?php echo base_url('C_Detailstuff/index/'.$nb->id_barang);?>"><i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.3s">
-                    <div class="feature-events-thumb">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/event-2.jpg')?>" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>STNK dan BPKB</h5>
-                        <h6>Kampus UPI</h6>
-                        <p>Ditemukan STNK dan BPKB dikampus UPI sebelah Martabak Lezat</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.4s">
-                    <div class="feature-events-thumb">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/event-3.jpg')?>" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">31 Nov 2018</a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>Tas Eiger Kecil</h5>
-                        <h6>Musholla Poltekes</h6>
-                        <p>aku nemu tas eiger kecil gatau barangnya apa</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.5s">
-                    <div class="feature-events-thumb">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/event-4.jpg')?>" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">1 Dec 2018</a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>Kunci Mobil Ayla</h5>
-                        <h6>ARS Service</h6>
-                        <p>Kunci Mobil sapa nih ketinggalan</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.6s">
-                    <div class="feature-events-thumb">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/event-5.jpg')?>" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>New Moon Party</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.7s">
-                    <div class="feature-events-thumb">
-                        <img src="<?php echo base_url('assets/front/img/bg-img/event-6.jpg')?>" alt="">
-                        <div class="date-map-area d-flex">
-                            <a href="#">26 Nov</a>
-                            <a href="#"><img src="<?php echo base_url('assets/front/img/core-img/map.png')?>" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="feature-events-content">
-                        <h5>Happy hour at pub</h5>
-                        <h6>Manhathan</h6>
-                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
-                    </div>
-                    <div class="feature-events-details-btn">
-                        <a href="#">+</a>
-                    </div>
-                </div>
-            </div>
+                <?php
+            }
+            ?>
         </div>
     </div>
 </section>

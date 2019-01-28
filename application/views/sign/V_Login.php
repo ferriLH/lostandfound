@@ -1,6 +1,15 @@
 <!doctype html>
 <html>
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133302345-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-133302345-1');
+    </script>
     <!-- Title -->
     <title><?php echo $title;?></title>
 
@@ -93,6 +102,25 @@
             color: #fff;
             background-color:#3970b0;
         }
+        @media (max-width: 800px) {
+            button.register {
+                width: 295px;
+            }
+        }
+        @media (max-width: 384px) {
+            button.register {
+                width: 260px;
+                height:45px;
+            }
+        }
+        @media (max-width: 320px) {
+            button.register {
+                width: 230px;
+                height: 40px;
+                font-size:15px;
+            }
+        }
+
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
