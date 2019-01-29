@@ -13,14 +13,16 @@ class C_Stuff extends CI_Controller
     {
         parent::__construct();
         $this->load->model('M_Stuff');
+        $this->load->model('M_Dashboard');
     }
-    public function add_stuffs()
+    public function add_stuffs($id)
     {
         if ($this->session->userdata('isLogin') == TRUE) {
             $data = array(
                 "title" => "Add Stuffs | Lost and Found",
                 "data_kota" => $this->M_Stuff->get_data_kota(),
-                "data_label" => $this->M_Stuff->get_data_label()
+                "data_label" => $this->M_Stuff->get_data_label(),
+                "notif_new_inbox"=>$this->M_Dashboard->get_new_inbox($id),
             );
             $this->load->view('back/V_Add_stuffs',$data);
         }else{
@@ -133,7 +135,8 @@ class C_Stuff extends CI_Controller
         if ($this->session->userdata('isLogin') == TRUE) {
             $data = array(
                 "title" => "Edit Stuffs | Lost and Found",
-                "barang" => $this->M_Stuff->get_data_brg($id)
+                "barang" => $this->M_Stuff->get_data_brg($id),
+                "notif_new_inbox"=>$this->M_Dashboard->get_new_inbox($id)
             );
             $this->load->view('back/V_Edit_stuffs',$data);
         }else{

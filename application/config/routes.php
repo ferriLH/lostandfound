@@ -67,6 +67,9 @@ $route['contact']               = 'C_Contactus';
 $route['profile']               = 'C_Profile';
 $route['inbox']                 = 'C_Inbox';
 $route['stuffs/add']            = 'C_Stuff/add_stuffs';
+$route['profile/(:any)']        = 'C_Profile/index/$1';
+$route['inbox/(:any)']          = 'C_Inbox/index/$1';
+$route['stuffs/add/(:any)']     = 'C_Stuff/add_stuffs/$1';
 $route['404_override']          = '';
 $route['translate_uri_dashes']  = FALSE;
 

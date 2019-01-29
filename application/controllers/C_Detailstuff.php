@@ -26,4 +26,15 @@ class C_Detailstuff extends CI_Controller
 		$data['barang'] = $barang;
 		$this->load->view('front/V_Detailstuff',$data);
 	}
+    function message($id_brg){
+        date_default_timezone_set('Asia/Jakarta');
+        $t      = date('Y/m/d H:i:s');
+        $id     = $this->input->post('id_user');
+        $idt    = $this->input->post('id_user_tujuan');
+        $s      = $this->input->post('subject');
+        $m      = $this->input->post('message');
+        $this->M_Detailstuff->insertMessage($id,$idt,$s,$m,$t);
+        $this->session->set_flashdata('result_pesan', '<br>Message has been sent.');
+        redirect('C_Detailstuff/index/'.$id_brg);
+    }
 }

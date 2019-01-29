@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 28 Jan 2019 pada 13.40
+-- Generation Time: 29 Jan 2019 pada 12.42
 -- Versi Server: 10.1.29-MariaDB
 -- PHP Version: 7.2.0
 
@@ -46,12 +46,13 @@ CREATE TABLE `t_barang` (
 --
 
 INSERT INTO `t_barang` (`id_barang`, `id_kota`, `id_univ`, `id_label`, `id_user`, `nama_barang`, `foto_barang`, `deskripsi`, `status_barang`, `tanggal_upload`) VALUES
-(3, 1, 2, 1, 8, 'dompet prada', 'liam-gallagher.jpg', 'black prada wallet', 1, '2019-01-10'),
-(9, 1, 3, 1, 8, ' Louis Vuitton Wallet', 'vertikal_logo_1.png', 'qwertdcx', 1, '2019-01-11'),
-(11, 1, 3, 2, 8, 'STNK Motor', 'about.jpg', 'STNK Motor honda beat F 6969 BF', 1, '2019-01-11'),
-(12, 1, 1, 2, 8, 'STNK Mobil', 'grup.jpg', 'STNK Mobil toyota hiace', 1, '2019-01-11'),
-(13, 1, 2, 2, 8, 'STNK PESAWAT', 'perhubungan.png', 'JAJAJAJAJAJAJAJAJA                                    ', 1, '2019-01-17'),
-(14, 1, 3, 1, 9, 'Louis Vuitton Wallet', 'lv.jpg', 'Original\r\nLouis Vuitton Wallet\r\nColor brown                                    ', 1, '2019-01-18');
+(15, 1, 1, 2, 11, 'stnk motor yamaha', 'stnk.jpg', 'stnk di temukan di dekat bogaraso', 1, '2019-01-29'),
+(16, 1, 3, 1, 11, 'dompet louis vuitton', 'maxresdefault.jpg', 'dompet merk louis vuitton warna coklat ditemukan dekat kafe double 8 ', 1, '2019-01-29'),
+(17, 1, 1, 3, 11, 'kunci motor', 'khonda.jpg', 'kunci motor honda tanpa gantungan, ditemukan di parkiran dago', 1, '2019-01-29'),
+(18, 1, 2, 4, 11, 'iphone 5s', '5s.jpg', 'iphone 5s warna putih, ditemukan di jalan ganesha ITB', 1, '2019-01-29'),
+(19, 1, 1, 3, 11, 'kunci motor', 'vespa.jpg', 'kunci motor vespa matic, ditemukan di basement b3 unikom', 1, '2019-01-29'),
+(20, 1, 2, 3, 11, 'kunci mobil', 'mercy.jpg', 'kunci mobil mercedes benz warna hitam, ditemukan di dekat mesjid salman ITB', 1, '2019-01-29'),
+(21, 1, 1, 5, 11, 'SIM motor', 'sim.jpg', 'sim motor atas nama contoh doang, ditemukan dekat mcd simpang dago ', 1, '2019-01-29');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,35 @@ CREATE TABLE `t_label` (
 
 INSERT INTO `t_label` (`id_label`, `nama_label`) VALUES
 (1, 'dompet'),
-(2, 'STNK');
+(2, 'STNK'),
+(3, 'kunci'),
+(4, 'handphone'),
+(5, 'SIM');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `t_message`
+--
+
+CREATE TABLE `t_message` (
+  `id_message` int(255) NOT NULL,
+  `id_user` int(255) NOT NULL,
+  `id_user_tujuan` int(255) NOT NULL,
+  `subjek` varchar(25) NOT NULL,
+  `pesan` text NOT NULL,
+  `status` tinyint(1) NOT NULL DEFAULT '0',
+  `hapus` tinyint(1) NOT NULL DEFAULT '0',
+  `waktu` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `t_message`
+--
+
+INSERT INTO `t_message` (`id_message`, `id_user`, `id_user_tujuan`, `subjek`, `pesan`, `status`, `hapus`, `waktu`) VALUES
+(2, 10, 11, 'Test', 'Tes tis', 1, 0, '2019-01-29 16:28:07'),
+(3, 10, 11, 'test', 'testis', 0, 0, '2019-01-29 16:30:30');
 
 -- --------------------------------------------------------
 
@@ -112,16 +141,6 @@ CREATE TABLE `t_pesan` (
   `waktu` datetime NOT NULL,
   `waktu_delete` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data untuk tabel `t_pesan`
---
-
-INSERT INTO `t_pesan` (`id_pesan`, `nama`, `email`, `subjek`, `pesan`, `status`, `hapus`, `waktu`, `waktu_delete`) VALUES
-(37, 'lostandfound', 'red.army@my.gavilan.edu', 'asasasa', 'asasasasas', 0, 0, '2019-01-10 17:14:49', '0000-00-00 00:00:00'),
-(38, 'Fobe', 'red.army@my.gavilan.edu', 'test', 'sdadasd', 0, 0, '2019-01-18 00:22:27', '0000-00-00 00:00:00'),
-(39, 'Fobe', 'red.army@my.gavilan.edu', 'test', 'sdadasd', 0, 0, '2019-01-18 00:38:10', '0000-00-00 00:00:00'),
-(40, 'Fobe', 'red.army@my.gavilan.edu', 'test', 'sdadasd', 0, 0, '2019-01-18 00:39:22', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -167,8 +186,8 @@ CREATE TABLE `t_user` (
 --
 
 INSERT INTO `t_user` (`id_user`, `nik`, `nama`, `email`, `password`, `alamat`, `file_foto`, `file_ktp`, `status`) VALUES
-(8, 'utut', 'utut', 'ututardia@gmail.com', 'a00ef087ab5a5987ade38555f3a341f90f7ee3a7', 'Bandung', 'feature-1.jpg', NULL, 1),
-(9, '10116254', 'Ferri L Halim', 'ferrilasmihalim@email.unikom.ac.id', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'Cipedes Bandung', 'IMG-20171218-WA0007.png', NULL, 1);
+(10, 'admin', 'admin', 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin', 'avatar.png', NULL, 1),
+(11, '10116254', 'Ferri', 'ferrilasmihalim@email.unikom.ac.id', 'c736084b17a2161bdc7c2a7129459375752ee858', 'Cipedes Bandung', 'IMG-20171218-WA0007.png', NULL, 1);
 
 --
 -- Indexes for dumped tables
@@ -197,6 +216,13 @@ ALTER TABLE `t_label`
   ADD PRIMARY KEY (`id_label`);
 
 --
+-- Indexes for table `t_message`
+--
+ALTER TABLE `t_message`
+  ADD PRIMARY KEY (`id_message`),
+  ADD KEY `id_user` (`id_user`);
+
+--
 -- Indexes for table `t_pesan`
 --
 ALTER TABLE `t_pesan`
@@ -213,7 +239,8 @@ ALTER TABLE `t_univ`
 -- Indexes for table `t_user`
 --
 ALTER TABLE `t_user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -223,13 +250,19 @@ ALTER TABLE `t_user`
 -- AUTO_INCREMENT for table `t_barang`
 --
 ALTER TABLE `t_barang`
-  MODIFY `id_barang` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_barang` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `t_label`
 --
 ALTER TABLE `t_label`
-  MODIFY `id_label` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_label` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `t_message`
+--
+ALTER TABLE `t_message`
+  MODIFY `id_message` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `t_pesan`
@@ -247,7 +280,7 @@ ALTER TABLE `t_univ`
 -- AUTO_INCREMENT for table `t_user`
 --
 ALTER TABLE `t_user`
-  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
@@ -261,6 +294,12 @@ ALTER TABLE `t_barang`
   ADD CONSTRAINT `t_barang_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `t_user` (`id_user`),
   ADD CONSTRAINT `t_barang_ibfk_4` FOREIGN KEY (`id_univ`) REFERENCES `t_univ` (`id_univ`) ON DELETE NO ACTION ON UPDATE CASCADE,
   ADD CONSTRAINT `t_barang_ibfk_5` FOREIGN KEY (`id_label`) REFERENCES `t_label` (`id_label`) ON DELETE NO ACTION ON UPDATE CASCADE;
+
+--
+-- Ketidakleluasaan untuk tabel `t_message`
+--
+ALTER TABLE `t_message`
+  ADD CONSTRAINT `t_message_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `t_user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `t_univ`

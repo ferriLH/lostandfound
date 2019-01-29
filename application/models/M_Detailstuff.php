@@ -22,6 +22,16 @@ class M_Detailstuff extends CI_Model
         $this->db->where('id_barang=',$id);
         return $this->db->get()->result();
 	}
+    function insertMessage($id,$idt,$s,$m,$t){
+        $data = array(
+            'id_message'    =>'',
+            'id_user'       =>$id,
+            'id_user_tujuan'=>$idt,
+            'subjek'        =>$s,
+            'pesan'         =>$m,
+            'status'        =>0,
+            'hapus'         =>0,
+            'waktu'         =>$t);
+        $this->db->insert('t_message',$data);
+    }
 }
-
-?>

@@ -12,12 +12,15 @@ class C_Inbox extends CI_Controller
     {
         parent::__construct();
         $this->load->model('M_Inbox');
+        $this->load->model('M_Dashboard');
     }
-    public function index()
+    public function index($id)
     {
         if ($this->session->userdata('isLogin') == TRUE) {
             $data = array(
-                "title" => "Inbox | Lost and Found"
+                "title" => "Inbox | Lost and Found",
+                "notif_new_inbox"=>$this->M_Dashboard->get_new_inbox($id),
+                "inbox"=>$this->M_Inbox->get_inbox($id),
             );
             $this->load->view('back/V_Inbox',$data);
 

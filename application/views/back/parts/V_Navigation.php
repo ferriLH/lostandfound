@@ -156,14 +156,14 @@ $foto   = $this->session->userdata('file_foto');
                                         </a>
                                     </li>
                                     <li class="<?php if($this->uri->segment(1)=='profile'){echo 'active';}?> has-sub">
-                                        <a class="js-arrow" href="<?php echo base_url('profile')?>">
+                                        <a class="js-arrow" href="<?php echo base_url('profile/').$this->session->userdata('id_user')?>">
                                             <i class="fas fa-user"></i>Account
                                         </a>
                                     </li>
                                     <li class="<?php if($this->uri->segment(1)=='inbox'){echo 'active';}?> has-sub">
-                                        <a href="<?php echo base_url('inbox');?>">
+                                        <a href="<?php echo base_url('inbox/').$this->session->userdata('id_user');?>">
                                             <i class="fas fa-chart-bar"></i>Inbox</a>
-                                        <span class="inbox-num">0</span>
+                                        <span class="inbox-num"><?php echo count($notif_new_inbox)?></span>
                                     </li>
                                     <li class="<?php if($this->uri->segment(1)=='stuffs' || $this->uri->segment(1)=='C_Stuff'){echo 'active';}?> has-sub">
                                         <a class="js-arrow" href="#">
@@ -174,7 +174,7 @@ $foto   = $this->session->userdata('file_foto');
                                         </a>
                                         <ul class="list-unstyled navbar__sub-list js-sub-list">
                                             <li class="<?php if($this->uri->segment(2)=='add'){echo 'active';}?> ">
-                                                <a href="<?php echo base_url('stuffs/add');?>">
+                                                <a href="<?php echo base_url('stuffs/add/').$this->session->userdata('id_user');?>">
                                                     <i class="fas fa-plus"></i>Add</a>
                                             </li>
                                             <li class="<?php if($this->uri->segment(2)=='edit_stuffs'){echo 'active';}?> ">

@@ -19,7 +19,8 @@ class C_Dashboard extends CI_Controller {
         if ($this->session->userdata('isLogin') == TRUE) {
             $data = array(
                 "title" => "Dashboard | Lost and Found",
-                "barang" => $this->M_Stuff->get_data_brg($id)
+                "barang" => $this->M_Stuff->get_data_brg($id),
+                "notif_new_inbox"=>$this->M_Dashboard->get_new_inbox($id),
             );
             $this->load->view('back/V_Dashboard',$data);
         }else{
