@@ -53,7 +53,7 @@ class C_List extends CI_Controller
             "title" => "Advanced Search | Lost and Found"
         );
         $label = $this->input->get('inputlabel');
-        $kota  = $this->input->get('nama_kota');
+        $kota  = $this->input->get('kota');
         $univ  = $this->input->get('univ');
         $search = $this->M_List->get_advanced_search($label,$kota,$univ);
         $data['barang'] = $search;

@@ -44,7 +44,7 @@ class M_Home extends CI_Model
     }
     function get_most_label()
     {
-        return $this->db->query("SELECT l.nama_label,l.id_label, count(b.id_label) as jumlah FROM t_barang b INNER JOIN t_label l ON b.id_label=l.id_label GROUP BY b.id_label ORDER BY jumlah DESC LIMIT 5")->result();
+        return $this->db->query("SELECT l.nama_label,l.id_label, count(b.id_label) as jumlah FROM t_barang b INNER JOIN t_label l ON b.id_label=l.id_label WHERE b.status_barang = 1 GROUP BY b.id_label ORDER BY jumlah DESC LIMIT 5")->result();
     }
     function get_most_barang()
     {
@@ -52,6 +52,7 @@ class M_Home extends CI_Model
         $this->db->from('t_barang');
         $this->db->join('t_univ','t_barang.id_univ=t_univ.id_univ');
         $this->db->order_by('tanggal_upload','desc');
+        $this->db->where('status_barang',TRUE);
         $this->db->limit(6);
         return $this->db->get()->result();
     }

@@ -64,17 +64,35 @@ $this->load->view("front/parts/V_Navigation");
                             <h6>What are you looking for?</h6>
                             <form action="<?php echo base_url('explore/advancedsearch')?>" method="get">
                                 <input style="width: 100%;" placeholder="Label" type="text" id="myInput" name="inputlabel" class="form-control autocomplete">&nbsp;&nbsp;&nbsp;
-                                <select style="width: 100%;" class="custom-select" name="nama_kota">
+                                <script src="<?php echo base_url()?>assets/back/CoolAdmin-master/vendor/jquery/dist/jquery.min.js"></script>
+                                <script type="text/javascript">
+                                    $(function(){
+                                        $.ajaxSetup({
+                                            type:"GET",
+                                            url: "<?php echo base_url('C_Stuff/ambil_data') ?>",
+                                            cache: false,
+                                        });
+                                        $("#select-kota").change(function(){
+                                            var value=$(this).val();
+                                            if(value>0){
+                                                $.ajax({
+                                                    data:{modul:'kota',id:value},
+                                                    success: function(respond){
+                                                        $("#select-univ").html(respond);
+                                                    }
+                                                })
+                                            }
+                                        });
+                                    })
+                                </script>
+                                <select style="width: 100%;" class="custom-select" name="kota" id="select-kota">
                                     <option selected>Area</option>
                                     <?php foreach ($kota as $k):?>
-                                     <option value="<?php echo($k->nama_kota);?>"><?php print_r($k->nama_kota);?></option>
+                                     <option value="<?php echo($k->id_kota);?>"><?php print_r($k->nama_kota);?></option>
                                      <?php endforeach;?>
                                 </select>
-                                <select style="width: 100%;" class="custom-select" name="univ">
-                                    <option selected>university</option>
-                                    <?php foreach ($univ as $u):?>
-                                     <option value="<?php echo($u->nama_univ);?>"><?php print_r($u->nama_univ);?></option>
-                                     <?php endforeach;?>
+                                <select style="width: 100%;" class="custom-select" name="univ" id="select-univ">
+                                    <option value="0">Please select city</option>
                                 </select>
                                 <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Search</button>
                             </form>
@@ -128,7 +146,7 @@ $this->load->view("front/parts/V_Navigation");
         <div class="row">
             <div class="col-12 col-lg-6">
                 <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.2s">
-                    <img style="min-height: 620px;max-height: 620px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bankot.jpg')?>" alt="">
+                    <img style="height: 620px;max-height: 620px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bankot.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
                             <a href="<?php echo base_url('C_List/byCity/1')?>">Midtown of Bandung</a>
@@ -154,7 +172,7 @@ $this->load->view("front/parts/V_Navigation");
                     </div>
                 </div>
                 <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
-                    <img style="min-height: 300px;max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bantim.jpg')?>" alt="">
+                    <img style="max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bantim.jpg')?>" alt="">
                     <div class="editors-pick-info">
                         <div class="places-total-destinations d-flex">
                             <a href="<?php echo base_url('C_List/byCity/3')?>">East Bandung</a>
@@ -167,48 +185,50 @@ $this->load->view("front/parts/V_Navigation");
                 </div>
 
             </div>
-            <div class="row">
-                <div class="col-12 col-lg-6">
-                    <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.2s">
-                        <img style="min-height: 620px;max-height: 620px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/cimahi1.jpg')?>" alt="">
-                        <div class="editors-pick-info">
-                            <div class="places-total-destinations d-flex">
-                                <a href="<?php echo base_url('C_List/byCity/4')?>">Midtown of Cimahi</a>
-<!--                                <a href="#">43 Informations</a>-->
-                            </div>
-                            <div class="add-more">
-<!--                                <a href="#">+</a>-->
-                            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.2s">
+                    <img style="height: 620px;max-height: 620px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/cimahi1.jpg')?>" alt="">
+                    <div class="editors-pick-info">
+                        <div class="places-total-destinations d-flex">
+                            <a href="<?php echo base_url('C_List/byCity/4')?>">Midtown of Cimahi</a>
+                            <!--                            <a href="#">1643 Informations</a>-->
                         </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
-                        <img style="min-height: 300px;max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bansel.jpg')?>" alt="">
-                        <div class="editors-pick-info">
-                            <div class="places-total-destinations d-flex">
-                                <a href="<?php echo base_url('C_List/byCity/5')?>">South Bandung</a>
-<!--                                <a href="#">94 Informations</a>-->
-                            </div>
-                            <div class="add-more">
-<!--                                <a href="#">+</a>-->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
-                        <img style="min-height: 300px;max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/cimsel.jpg')?>" alt="">
-                        <div class="editors-pick-info">
-                            <div class="places-total-destinations d-flex">
-                                <a href="<?php echo base_url('C_List/byCity/6')?>">North and South Cimahi </a>
-<!--                                <a href="#">243 Informations</a>-->
-                            </div>
-                            <div class="add-more">
-<!--                                <a href="#">+</a>-->
-                            </div>
+                        <div class="add-more">
+                            <!--                            <a href="#">+</a>-->
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-12 col-lg-6">
+                <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
+                    <img style="max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/bansel.jpg')?>" alt="">
+                    <div class="editors-pick-info">
+                        <div class="places-total-destinations d-flex">
+                            <a href="<?php echo base_url('C_List/byCity/5')?>">South Bandung</a>
+                            <!--                            <a href="#">943 Information</a>-->
+                        </div>
+                        <div class="add-more">
+                            <!--                            <a href="#">+</a>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
+                    <img style="max-height: 300px;width: auto" src="<?php echo base_url('assets/front/img/bg-img/cimsel.jpg')?>" alt="">
+                    <div class="editors-pick-info">
+                        <div class="places-total-destinations d-flex">
+                            <a href="<?php echo base_url('C_List/byCity/6')?>">North and South Cimahi</a>
+                            <!--                            <a href="#">243 Information</a>-->
+                        </div>
+                        <div class="add-more">
+                            <!--                            <a href="#">+</a>-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
 </section>
 <!-- ***** Editor Pick Area End ***** -->
 

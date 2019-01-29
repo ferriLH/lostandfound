@@ -3,23 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="118c4f25-8564-435f-a1bf-f770292f678c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Detailstuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Detailstuff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/C_List.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_List.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/M_Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_Home.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/M_List.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/back/V_Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/back/V_Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/back/parts/V_Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/back/parts/V_Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/front/V_Contactus.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/front/V_Contactus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/front/V_Detailstuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/front/V_Detailstuff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/front/V_Home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/front/V_Home.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/front/V_List.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/front/V_List.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/front/parts/V_Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/front/parts/V_Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/sign/V_Forget.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/sign/V_Forget.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/sign/V_Forget_pass_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/sign/V_Forget_pass_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/sign/V_Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/sign/V_Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/sign/V_Signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/sign/V_Signup.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db_lf (update).sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/front/img/bg-img/bankot.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/front/img/bg-img/bankot.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/front/img/bg-img/cimahi1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/front/img/bg-img/cimahi1.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,19 +25,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+            <state relative-caret-position="420">
+              <caret line="64" column="38" lean-forward="true" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/back/parts/V_Navigation.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="25" column="29" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="25" selection-end-column="29" />
+              <folding>
+                <element signature="e#1075#1081#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/back/V_Profile.php">
+        <entry file="file://$PROJECT_DIR$/application/views/front/V_Home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="50" column="30" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="50" selection-end-column="30" />
+            <state relative-caret-position="301">
+              <caret line="191" column="46" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
               <folding>
-                <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#2;n#div#0;n#section#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,18 +84,12 @@
         <option value="$PROJECT_DIR$/application/controllers/C_Dashboard.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/controllers/C_Login.php" />
-        <option value="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" />
         <option value="$PROJECT_DIR$/application/views/back/V_Dashboard.php" />
         <option value="$PROJECT_DIR$/assets/sign/css/style2.css" />
         <option value="$PROJECT_DIR$/application/views/front/V_Contactus.php" />
-        <option value="$PROJECT_DIR$/application/controllers/C_List.php" />
-        <option value="$PROJECT_DIR$/application/models/M_List.php" />
-        <option value="$PROJECT_DIR$/application/controllers/C_Home.php" />
-        <option value="$PROJECT_DIR$/application/models/M_Home.php" />
         <option value="$PROJECT_DIR$/application/controllers/C_Detailstuff.php" />
         <option value="$PROJECT_DIR$/application/views/front/V_Detailstuff.php" />
         <option value="$PROJECT_DIR$/application/views/front/V_List.php" />
-        <option value="$PROJECT_DIR$/application/views/front/V_Home.php" />
         <option value="$PROJECT_DIR$/application/views/front/parts/V_Header.php" />
         <option value="$PROJECT_DIR$/application/views/sign/V_Login.php" />
         <option value="$PROJECT_DIR$/application/views/sign/V_Signup.php" />
@@ -97,19 +97,26 @@
         <option value="$PROJECT_DIR$/application/views/sign/V_Forget_pass_form.php" />
         <option value="$PROJECT_DIR$/application/views/back/parts/V_Header.php" />
         <option value="$PROJECT_DIR$/application/views/back/V_Profile.php" />
+        <option value="$PROJECT_DIR$/application/models/M_Home.php" />
+        <option value="$PROJECT_DIR$/application/controllers/C_Home.php" />
+        <option value="$PROJECT_DIR$/application/controllers/C_List.php" />
+        <option value="$PROJECT_DIR$/application/models/M_List.php" />
+        <option value="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" />
+        <option value="$PROJECT_DIR$/application/views/front/V_Home.php" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="620" />
-    <option name="width" value="1310" />
-    <option name="height" value="1040" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,6 +171,28 @@
             <path>
               <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
               <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="parts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="sign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -189,7 +218,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,17 +262,19 @@
       <workItem from="1548600350915" duration="2097000" />
       <workItem from="1548645905089" duration="281000" />
       <workItem from="1548658025412" duration="17342000" />
+      <workItem from="1548684914829" duration="2999000" />
+      <workItem from="1548739770976" duration="5802000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60713000" />
+    <option name="totallyTimeSpent" value="69514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16174497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16510066" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -265,7 +295,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16174497" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16308725" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -354,13 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/back/V_Add_stuffs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="55" column="177" selection-end-line="278" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_Signup.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -379,13 +402,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1756">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/back/parts/V_Navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="156" column="97" selection-start-line="156" selection-start-column="97" selection-end-line="156" selection-end-column="97" />
         </state>
       </provider>
     </entry>
@@ -410,20 +426,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_Stuff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="18" column="31" selection-end-line="127" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/C_Stuff.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="130" column="35" selection-start-line="130" selection-start-column="32" selection-end-line="130" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -458,34 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="54" column="26" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/C_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_List.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/C_List.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/C_Detailstuff.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -500,35 +474,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/front/V_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="304" column="98" selection-start-line="304" selection-start-column="98" selection-end-line="304" selection-end-column="98" />
-          <folding>
-            <element signature="n#style#0;n#section#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#4;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/front/V_Detailstuff.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/front/parts/V_Header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" selection-start-line="4" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/sign/V_Login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -560,19 +509,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+    <entry file="file://$PROJECT_DIR$/application/views/back/V_Profile.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="56" column="49" selection-start-line="56" selection-start-column="49" selection-end-line="56" selection-end-column="49" />
+        <state relative-caret-position="250">
+          <caret line="45" column="29" lean-forward="true" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/back/V_Profile.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/parts/V_Header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="50" column="30" lean-forward="true" selection-start-line="41" selection-start-column="24" selection-end-line="50" selection-end-column="30" />
+        <state relative-caret-position="136">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/back/V_Add_stuffs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="573">
+          <caret line="115" column="51" lean-forward="true" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/C_Stuff.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="29" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_Stuff.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/C_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/C_List.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="51" selection-start-line="51" selection-end-line="59" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_List.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="52" selection-start-line="52" selection-end-line="63" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="64" column="38" lean-forward="true" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/back/parts/V_Navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="25" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#div#2;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1075#1081#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/sign/V_Login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="121" column="9" lean-forward="true" selection-start-line="104" selection-start-column="8" selection-end-line="121" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/front/V_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="191" column="46" selection-start-line="191" selection-start-column="46" selection-end-line="191" selection-end-column="46" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#1;n#div#0;n#section#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#1;n#div#0;n#section#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#1;n#div#2;n#div#0;n#section#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#1;n#div#1;n#div#2;n#div#0;n#section#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

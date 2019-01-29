@@ -56,9 +56,9 @@ class M_List extends CI_Model
         $this->db->join('t_kota','t_barang.id_kota=t_kota.id_kota');
         $this->db->join('t_user','t_barang.id_user=t_user.id_user');
         $this->db->join('t_univ','t_barang.id_univ=t_univ.id_univ');
-        $this->db->where('t_kota.nama_kota',$kota);
-        $this->db->where('t_univ.nama_univ',$univ);
-        $this->db->like('t_barang.nama_barang',$label);
+        $this->db->where('t_kota.id_kota',$kota);
+        $this->db->where('t_univ.id_univ',$univ);
+        $this->db->like('t_label.nama_label',$label);
         $this->db->where('t_barang.status_barang',TRUE);
 
         return $this->db->get()->result();

@@ -21,44 +21,47 @@ $foto   = $this->session->userdata('file_foto');
                     </a>
                 </div>
                 <div class="header__tool">
-                    <div class="header-button-item has-noti js-item-menu">
-                        <i class="zmdi zmdi-notifications"></i>
-                        <div class="notifi-dropdown js-dropdown">
-                            <div class="notifi__title">
-                                <p>You have 3 Notifications</p>
-                            </div>
-                            <div class="notifi__item">
-                                <div class="bg-c1 img-cir img-40">
-                                    <i class="zmdi zmdi-email-open"></i>
-                                </div>
-                                <div class="content">
-                                    <p>You got a email notification</p>
-                                    <span class="date">April 12, 2018 06:50</span>
-                                </div>
-                            </div>
-                            <div class="notifi__item">
-                                <div class="bg-c2 img-cir img-40">
-                                    <i class="zmdi zmdi-account-box"></i>
-                                </div>
-                                <div class="content">
-                                    <p>Your account has been blocked</p>
-                                    <span class="date">April 12, 2018 06:50</span>
-                                </div>
-                            </div>
-                            <div class="notifi__item">
-                                <div class="bg-c3 img-cir img-40">
-                                    <i class="zmdi zmdi-file-text"></i>
-                                </div>
-                                <div class="content">
-                                    <p>You got a new file</p>
-                                    <span class="date">April 12, 2018 06:50</span>
-                                </div>
-                            </div>
-                            <div class="notifi__footer">
-                                <a href="#">All notifications</a>
-                            </div>
-                        </div>
-                    </div>
+                    <button class="header-button-item js-item-menu" onclick="location.href='<?php echo base_url('');?>'">
+                        <i class="zmdi zmdi-arrow-back"></i><h5>&nbsp; Back to front page</h5>
+                    </button>
+<!--                    <div class="header-button-item has-noti js-item-menu">-->
+<!--                        <i class="zmdi zmdi-notifications"></i>-->
+<!--                        <div class="notifi-dropdown js-dropdown">-->
+<!--                            <div class="notifi__title">-->
+<!--                                <p>You have 3 Notifications</p>-->
+<!--                            </div>-->
+<!--                            <div class="notifi__item">-->
+<!--                                <div class="bg-c1 img-cir img-40">-->
+<!--                                    <i class="zmdi zmdi-email-open"></i>-->
+<!--                                </div>-->
+<!--                                <div class="content">-->
+<!--                                    <p>You got a email notification</p>-->
+<!--                                    <span class="date">April 12, 2018 06:50</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="notifi__item">-->
+<!--                                <div class="bg-c2 img-cir img-40">-->
+<!--                                    <i class="zmdi zmdi-account-box"></i>-->
+<!--                                </div>-->
+<!--                                <div class="content">-->
+<!--                                    <p>Your account has been blocked</p>-->
+<!--                                    <span class="date">April 12, 2018 06:50</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="notifi__item">-->
+<!--                                <div class="bg-c3 img-cir img-40">-->
+<!--                                    <i class="zmdi zmdi-file-text"></i>-->
+<!--                                </div>-->
+<!--                                <div class="content">-->
+<!--                                    <p>You got a new file</p>-->
+<!--                                    <span class="date">April 12, 2018 06:50</span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="notifi__footer">-->
+<!--                                <a href="#">All notifications</a>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
                     <div class="account-wrap">
                         <div class="account-item account-item--style2 clearfix js-item-menu">
                             <div class="image">
@@ -85,12 +88,6 @@ $foto   = $this->session->userdata('file_foto');
                                     <div class="account-dropdown__item">
                                         <a href="<?php echo base_url('profile');?>">
                                             <i class="zmdi zmdi-account"></i>Account</a>
-                                    </div>
-                                </div>
-                                <div class="account-dropdown__body">
-                                    <div class="account-dropdown__item">
-                                        <a href="<?php echo base_url('');?>">
-                                            <i class="zmdi zmdi-home"></i>Front Page</a>
                                     </div>
                                 </div>
                                 <div class="account-dropdown__footer">
