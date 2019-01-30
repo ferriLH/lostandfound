@@ -86,7 +86,7 @@ $foto   = $this->session->userdata('file_foto');
                                 </div>
                                 <div class="account-dropdown__body">
                                     <div class="account-dropdown__item">
-                                        <a href="<?php echo base_url('profile');?>">
+                                        <a href="<?php echo base_url('profile/').$this->session->userdata('id_user')?>">
                                             <i class="zmdi zmdi-account"></i>Account</a>
                                     </div>
                                 </div>

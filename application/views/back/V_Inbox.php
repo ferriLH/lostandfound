@@ -55,6 +55,7 @@ $this->load->view("back/parts/V_Navigation");
                         <div class="au-chat">
                             <div class="au-chat__title">
                                 <div class="au-chat-info">
+                                    <?php foreach ($inbox as $i){?>
                                     <div class="avatar-wrap online">
                                         <div class="avatar avatar--small">
                                             <a href="">
@@ -68,6 +69,7 @@ $this->load->view("back/parts/V_Navigation");
                                     <button class="au-input-icon">
                                         <a href=""><i class="zmdi zmdi-arrow-back"></i></a>
                                     </button>
+                                     <?php break;}?>
                                 </div>
                             </div>
                             <div class="au-chat__content">
@@ -75,7 +77,7 @@ $this->load->view("back/parts/V_Navigation");
                                     <span class="mess-time">12 Min ago</span>
                                     <div class="recei-mess__inner">
                                         <div class="avatar avatar--tiny">
-                                            <img src="images/icon/avatar-02.jpg" alt="John Smith">
+                                            <img src="<?php echo base_url('assets/back/CoolAdmin-master');?>images/icon/avatar-02.jpg" alt="John Smith">
                                         </div>
                                         <div class="recei-mess-list">
                                             <div class="recei-mess">Lorem ipsum dolor sit amet, consectetur adipiscing elit non iaculis</div>

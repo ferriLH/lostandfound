@@ -3,25 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="118c4f25-8564-435f-a1bf-f770292f678c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Detailstuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Detailstuff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Inbox.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/C_Stuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/C_Stuff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/M_Dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_Dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/M_Detailstuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_Detailstuff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/M_Inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/M_Inbox.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/back/V_Inbox.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/back/V_Inbox.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/front/V_Detailstuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/front/V_Detailstuff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/foto_barang/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foto_barang/grup.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foto_barang/liam-gallagher.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foto_barang/lv.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foto_barang/perhubungan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foto_barang/vertikal_logo_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/foto_user/feature-1.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,26 +20,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
+            <state relative-caret-position="624">
               <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/C_Inbox.php">
+        <entry file="file://$PROJECT_DIR$/application/views/back/parts/V_Navigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/M_Inbox.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="109" selection-start-line="15" selection-start-column="109" selection-end-line="15" selection-end-column="109" />
+            <state relative-caret-position="420">
+              <caret line="88" column="118" selection-start-line="88" selection-start-column="118" selection-end-line="88" selection-end-column="118" />
             </state>
           </provider>
         </entry>
@@ -64,11 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/back/V_Inbox.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="335">
+              <caret line="79" column="103" selection-start-line="79" selection-start-column="103" selection-end-line="79" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -112,21 +83,21 @@
         <option value="$PROJECT_DIR$/application/controllers/C_Detailstuff.php" />
         <option value="$PROJECT_DIR$/application/views/front/V_Detailstuff.php" />
         <option value="$PROJECT_DIR$/application/controllers/C_Dashboard.php" />
-        <option value="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" />
         <option value="$PROJECT_DIR$/application/controllers/C_Profile.php" />
         <option value="$PROJECT_DIR$/application/controllers/C_Stuff.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
         <option value="$PROJECT_DIR$/application/controllers/C_Inbox.php" />
         <option value="$PROJECT_DIR$/application/models/M_Dashboard.php" />
         <option value="$PROJECT_DIR$/application/models/M_Inbox.php" />
+        <option value="$PROJECT_DIR$/application/views/back/parts/V_Navigation.php" />
         <option value="$PROJECT_DIR$/application/views/back/V_Inbox.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="-10" />
+    <option name="width" value="980" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -216,6 +187,12 @@
               <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
               <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="back" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lostandfound" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lostandfound" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="front" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -280,18 +257,19 @@
       <workItem from="1548645905089" duration="281000" />
       <workItem from="1548658025412" duration="17342000" />
       <workItem from="1548684914829" duration="2999000" />
-      <workItem from="1548739770976" duration="16217000" />
+      <workItem from="1548739770976" duration="16977000" />
+      <workItem from="1548766294957" duration="555000" />
+      <workItem from="1548820504627" duration="2432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79929000" />
+    <option name="totallyTimeSpent" value="83676000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16442953" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16845638" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -450,20 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/C_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/C_List.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="51" selection-start-line="51" selection-end-line="59" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/front/V_List.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
@@ -574,45 +538,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_List.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="52" selection-start-line="52" selection-end-line="63" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/M_Home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_Dashboard.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="136" selection-start-line="14" selection-start-column="136" selection-end-line="14" selection-end-column="136" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/back/parts/V_Navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="162" column="103" lean-forward="true" selection-start-line="162" selection-start-column="103" selection-end-line="162" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/C_Inbox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -630,6 +559,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/C_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/M_List.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="42" selection-start-line="59" selection-start-column="42" selection-end-line="59" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/C_List.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="48" column="5" lean-forward="true" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/M_Inbox.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -637,13 +594,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/C_Inbox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="71" column="56" selection-start-line="71" selection-start-column="56" selection-end-line="71" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/back/parts/V_Navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="88" column="118" selection-start-line="88" selection-start-column="118" selection-end-line="88" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/back/V_Inbox.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="38" column="51" selection-start-line="38" selection-start-column="51" selection-end-line="38" selection-end-column="51" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="335">
+          <caret line="79" column="103" selection-start-line="79" selection-start-column="103" selection-end-line="79" selection-end-column="103" />
         </state>
       </provider>
     </entry>
