@@ -26,7 +26,7 @@ class C_Stuff extends CI_Controller
             );
             $this->load->view('back/V_Add_stuffs',$data);
         }else{
-            redirect('dasboard');
+            redirect('dashboard/'.$id);
         }
     }
     function ambil_data(){
@@ -73,18 +73,18 @@ class C_Stuff extends CI_Controller
                         if(!empty($uploadData)){
                             $this->M_Stuff->add_barang($kota,$univ,$id_l,$user,$nama,$uploadData['nama_foto'],$desk,$tgl);
                             $this->session->set_flashdata('result', '<br>Berhasil.');
-                            redirect('stuffs/add');
+                            redirect('stuffs/add/'.$id);
                         }else{
                             $this->session->set_flashdata('result', '<br>Gagal.');
-                            redirect('stuffs/add');
+                            redirect('stuffs/add/'.$id);
                         }
                     }else{
                         $this->session->set_flashdata('result', '<br>gagal upload foto.');
-                        redirect('stuffs/add');
+                        redirect('stuffs/add/'.$id);
                     }
                 }else{
                     $this->session->set_flashdata('result', '<br>pilih foto.');
-                    redirect('stuffs/add');
+                    redirect('stuffs/add/'.$id);
                 }
             }else{
                 $this->M_Stuff->add_label($label);
@@ -112,22 +112,22 @@ class C_Stuff extends CI_Controller
                         if(!empty($uploadData)){
                             $this->M_Stuff->add_barang($kota,$univ,$id_l,$user,$nama,$uploadData['nama_foto'],$desk,$tgl);
                             $this->session->set_flashdata('result', '<br>Berhasil.');
-                            redirect('stuffs/add');
+                            redirect('stuffs/add/'.$id);
                         }else{
                             $this->session->set_flashdata('result', '<br>Gagal.');
-                            redirect('stuffs/add');
+                            redirect('stuffs/add/'.$id);
                         }
                     }else{
                         $this->session->set_flashdata('result', '<br>gagal upload foto.');
-                        redirect('stuffs/add');
+                        redirect('stuffs/add/'.$id);
                     }
                 }else{
                     $this->session->set_flashdata('result', '<br>pilih foto.');
-                    redirect('stuffs/add');
+                    redirect('stuffs/add/'.$id);
                 }
             }
         }else{
-            redirect('dasboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function edit_stuffs($id)
@@ -140,7 +140,7 @@ class C_Stuff extends CI_Controller
             );
             $this->load->view('back/V_Edit_stuffs',$data);
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
     function delete_stuffs($id,$id_u){
@@ -151,18 +151,19 @@ class C_Stuff extends CI_Controller
         $this->session->set_flashdata("result","<br>successfully delete stuff.");
         redirect('C_Stuff/edit_stuffs/'.$id_u,$data);
     }
-    public function update_stuffs($id)
+    public function update_stuffs($id,$id_u)
     {
         if ($this->session->userdata('isLogin') == TRUE) {
             $data = array(
                 "title" => "Edit Stuffs | Lost and Found",
                 "barang" => $this->M_Stuff->get_data_brg_1($id),
                 "data_kota" => $this->M_Stuff->get_data_kota(),
-                "data_label" => $this->M_Stuff->get_data_label()
+                "data_label" => $this->M_Stuff->get_data_label(),
+                "notif_new_inbox"=>$this->M_Dashboard->get_new_inbox($id_u)
             );
             $this->load->view('back/V_Update_stuffs',$data);
         }else{
-            redirect('dasboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function update_stuffs_auth($id,$user)
@@ -255,7 +256,7 @@ class C_Stuff extends CI_Controller
                 }
             }
         }else{
-            redirect('dasboard');
+            redirect('dashboard/'.$id);
         }
     }
 }

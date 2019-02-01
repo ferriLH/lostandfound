@@ -56,7 +56,7 @@
                         if ($this->session->userdata('isLogin') == TRUE) {
                             ?>
                             <div class="dorne-add-listings-btn">
-                                <a href="<?php echo base_url('dashboard')?>" class="btn dorne-btn">Dashboard</a>
+                                <a href="<?php echo base_url('dashboard/'.$this->session->userdata('id_user'))?>" class="btn dorne-btn">Dashboard</a>
                             </div>
                             <?php
                         }else{

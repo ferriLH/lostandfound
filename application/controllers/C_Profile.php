@@ -24,7 +24,7 @@ class C_Profile extends CI_Controller {
             $this->load->view('back/V_Profile',$data);
 
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function delete($id)
@@ -35,7 +35,7 @@ class C_Profile extends CI_Controller {
             $this->session->set_flashdata('success', '<br>Your account has been deleted!');
             redirect('login');
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function update_nik($id)
@@ -57,9 +57,9 @@ class C_Profile extends CI_Controller {
                 $sess_data['file_foto']     = $dat->file_foto;
                 $this->session->set_userdata($sess_data);
             }
-            redirect('profile');
+            redirect('profile/'.$id);
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function update_nama($id)
@@ -81,9 +81,9 @@ class C_Profile extends CI_Controller {
                 $sess_data['file_foto']     = $dat->file_foto;
                 $this->session->set_userdata($sess_data);
             }
-            redirect('profile');
+            redirect('profile/'.$id);
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function update_email($id)
@@ -105,9 +105,9 @@ class C_Profile extends CI_Controller {
                 $sess_data['file_foto']     = $dat->file_foto;
                 $this->session->set_userdata($sess_data);
             }
-            redirect('profile');
+            redirect('profile/'.$id);
         }else{
-            redirect('dashboard');
+            redirect('dashboard.'.$id);
         }
     }
     public function update_address($id)
@@ -129,9 +129,9 @@ class C_Profile extends CI_Controller {
                 $sess_data['file_foto']     = $dat->file_foto;
                 $this->session->set_userdata($sess_data);
             }
-            redirect('profile');
+            redirect('profile/'.$id);
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function update_password($id)
@@ -142,7 +142,7 @@ class C_Profile extends CI_Controller {
         if ($this->session->userdata('isLogin') == TRUE) {
             if ($new != $confirm){
                 $this->session->set_flashdata('failed', '<br>Your new password and confirm password does not match!');
-                redirect('profile');
+                redirect('profile/'.$id);
             }else{
                 $cek = $this->M_Profile->cek(sha1($current));
                 if ($cek->num_rows() != 0) {
@@ -161,14 +161,14 @@ class C_Profile extends CI_Controller {
                         $sess_data['file_foto']     = $dat->file_foto;
                         $this->session->set_userdata($sess_data);
                     }
-                    redirect('profile');
+                    redirect('profile/'.$id);
                 }else{
                     $this->session->set_flashdata('failed', '<br>Your current password is wrong!');
-                    redirect('profile');
+                    redirect('profile/'.$id);
                 }
             }
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
     public function update_photo($id){
@@ -208,21 +208,21 @@ class C_Profile extends CI_Controller {
                             $sess_data['file_foto']     = $dat->file_foto;
                             $this->session->set_userdata($sess_data);
                         }
-                        redirect('profile');
+                        redirect('profile/'.$id);
                     }else{
                         $this->session->set_flashdata('failed', '<br>Failed');
-                        redirect('profile');
+                        redirect('profile/'.$id);
                     }
                 }else{
                     $this->session->set_flashdata('failed', '<br>Failed Upload Photo.');
-                    redirect('profile');
+                    redirect('profile/'.$id);
                 }
             }else{
                 $this->session->set_flashdata('failed', '<br>Select Photo.');
-                redirect('profile');
+                redirect('profile/'.$id);
             }
         }else{
-            redirect('dashboard');
+            redirect('dashboard/'.$id);
         }
     }
 }

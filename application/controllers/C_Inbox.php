@@ -25,7 +25,7 @@ class C_Inbox extends CI_Controller
             $this->load->view('back/V_Inbox',$data);
 
         }else{
-            redirect('dashboard');
+            redirect('dashboard'.$id);
         }
     }
 }

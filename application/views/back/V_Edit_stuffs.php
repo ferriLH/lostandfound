@@ -48,7 +48,7 @@ $this->load->view("back/parts/V_Navigation");
                                                 <i class="fa fa-trash"></i>
                                             </button>
                                         </a>
-                                        <a href="<?php echo base_url('C_Stuff/update_stuffs/');echo $brg->id_barang;?>">
+                                        <a href="<?php echo base_url('C_Stuff/update_stuffs/');echo $brg->id_barang."/";echo $this->session->userdata('id_user');?>">
                                             <button type="button" class="btn btn-default btn-sm" data-toggle="tooltip" data-container="body" title="Edit">
                                                 <i class="fa fa-edit"></i>
                                             </button>
